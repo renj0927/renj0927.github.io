@@ -432,14 +432,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/">
-                                <span class="chip bg-color">vue全家桶</span>
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/VUE/" class="post-category">
+                                VUE
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -464,7 +473,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2><center>保存当前页面状态的方法</center></h2>
+                <h2>保存当前页面状态的方法</h2>
 
 <hr>
 <p>1：<keep-alive>:<br>作用：保持页面现在的状态，跳出去后，回来还是这个状态。应用于单个组件比较好。<br>踩坑：做的单页面，想要在跳出页面后回来还是这个状态，所以想到了对整个页面使用keep-alive。虽然，状态是保持住了，但是移动端的头部（返回按键啥的都没了），所以以后keep-alive还是只能使用在某一个组件部分比较好。<br>用法：<keep-alive> 可以在里面加v-if来判断哪个是他想要包活的路由页面是哪个。在router上也要加。</p>
@@ -472,9 +481,9 @@
 
 <p>2：vuex<br>作用：通过vuex来存储需要保持的数据。然后取数据也是从store中取，所以只要不改变store中的值，就能保持状态。然后就通过vuex传值。<br>使用：</p>
 <ul>
-<li>在store中的创建的modules文件下添加一个.js文件。其中按照vuex的属性来写。对于初始化vuex，一般写在一个index.js中。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import mycoin from &#39;.&#x2F;modules&#x2F;mycoin&#39;</span><br><span class="line">Vue.use(Vuex)</span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">  modules: &#123;</span><br><span class="line">    mycoin,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;) &#x2F;&#x2F;注意在总的main.js中要引入vuex；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
+<li>在store中的创建的modules文件下添加一个.js文件。其中按照vuex的属性来写。对于初始化vuex，一般写在一个index.js中。</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import mycoin from &#39;.&#x2F;modules&#x2F;mycoin&#39;</span><br><span class="line">Vue.use(Vuex)</span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">  modules: &#123;</span><br><span class="line">    mycoin,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;) &#x2F;&#x2F;注意在总的main.js中要引入vuex；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
             </div>
             <hr/>
@@ -538,8 +547,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/">
-                                    <span class="chip bg-color">vue全家桶</span>
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -734,7 +743,11 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/VUE/" class="post-category">
+                                    VUE
+                                </a>
                             
                             
                         </span>
@@ -779,7 +792,11 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/VUE/" class="post-category">
+                                    VUE
+                                </a>
                             
                             
                         </span>
