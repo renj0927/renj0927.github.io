@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 啊！快进来学习">
+    <meta name="keywords" content="分类: react, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 啊！快进来学习</title>
+    <title>分类: react | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -352,127 +352,386 @@
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/public/tags/%E6%9D%82%E9%A1%B9/" title="杂项: 6">
+                
+                <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" title="CSS学习: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="杂项" style="background-color: #F9EBEA;">杂项
-                        <span class="tag-length">6</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/public/tags/linux/" title="linux: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="linux" style="background-color: #F5EEF8;">linux
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/public/tags/vue/" title="vue: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="vue" style="background-color: #D5F5E3;">vue
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/public/tags/CSS/" title="CSS: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="CSS" style="background-color: #E8F8F5;">CSS
+                            style="background-color: #F9EBEA;">CSS学习
                         <span class="tag-length">5</span>
                     </span>
                 </a>
                 
                 
-                <a href="/public/tags/js/" title="js: 1">
+                <a href="/public/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" title="浏览器: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="js" style="background-color: #FEF9E7;">js
+                            style="background-color: #F5EEF8;">浏览器
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/public/tags/git/" title="git: 1">
+                <a href="/public/categories/JS/" title="JS: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="git" style="background-color: #F8F9F9;">git
-                        <span class="tag-length">1</span>
+                            style="background-color: #D5F5E3;">JS
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
                 
-                <a href="/public/tags/%E6%84%9F%E6%83%B3/" title="感想: 1">
+                <a href="/public/categories/VUE/" title="VUE: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="感想" style="background-color: #82E0AA;">感想
-                        <span class="tag-length">1</span>
+                            style="background-color: #E8F8F5;">VUE
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
                 
-                <a href="/public/tags/JS/" title="JS: 2">
+                <a href="/public/categories/react/" title="react: 6">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="JS" style="background-color: #D7BDE2;">JS
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/public/tags/react/" title="react: 6">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="react" style="background-color: #A3E4D7;">react
+                             chip-active "
+                            style="background-color: #FEF9E7;">react
                         <span class="tag-length">6</span>
                     </span>
                 </a>
+                
                 
             </div>
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"杂项","weight":6,"link":"/public/tags/杂项/"},{"text":"linux","weight":1,"link":"/public/tags/linux/"},{"text":"vue","weight":3,"link":"/public/tags/vue/"},{"text":"CSS","weight":5,"link":"/public/tags/CSS/"},{"text":"js","weight":1,"link":"/public/tags/js/"},{"text":"git","weight":1,"link":"/public/tags/git/"},{"text":"感想","weight":1,"link":"/public/tags/感想/"},{"text":"JS","weight":2,"link":"/public/tags/JS/"},{"text":"react","weight":6,"link":"/public/tags/react/"}], {
-        autoResize: true
-    });
-</script>
 
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/11/22/react/RN%E4%B8%AD%E7%9A%84CSS/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="RN中的CSS">
+                            
+                            <span class="card-title">RN中的CSS</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                RN中的CSS总结
+前言:RN中的CSS有一些不同，基本上都是基于flex布局进行的了。（所以我大概明白了为什么面试会那么细问关于flex布局的问题，因为大厂需要使用RN，所以要熟练。）
+
+需要注意的点：
+
+注意一定要使用驼峰写法。
+
+RN
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/public/categories/react/" class="post-category">
+                                    react
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/public/tags/react/">
+                            <span class="chip bg-color">react</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/11/22/react/Redux/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Redux">
+                            
+                            <span class="card-title">Redux</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Redux
+
+
+一：redux是什么
+就是为了组件间的通信。视图与状态是一一对应的。所有的状态，都是保存在一个对象里面。二：redux有什么1：store（仓库）
+创建：123import &#123; createStore &#125;
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/public/categories/react/" class="post-category">
+                                    react
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/public/tags/react/">
+                            <span class="chip bg-color">react</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/11/22/react/RN%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Redux">
+                            
+                            <span class="card-title">Redux</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Q：React Native version mismatch详情：js的版本和native的版本不同
+解决：如果native版本低就更新native版本。但是，对于我的这次来说，什么都不管用，我选择重新安装项目，可能更快
+Q：invari
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/public/categories/react/" class="post-category">
+                                    react
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/public/tags/react/">
+                            <span class="chip bg-color">react</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/11/22/react/RN%E6%98%AF%E4%BB%80%E4%B9%88/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Redux">
+                            
+                            <span class="card-title">Redux</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                RN是什么
+
+是使用react框架和应用平台的原生功能来构建移动应用的开源框架。
+主要核心组件项目目录结构
+index.android.js和index.ios.js是rn项目的Android和ios的入口。
+
+组件库引入问题。
+组件在引入
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/public/categories/react/" class="post-category">
+                                    react
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/public/tags/react/">
+                            <span class="chip bg-color">react</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/11/22/react/react%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E4%BC%A0%E5%80%BC/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="react组件间传值">
+                            
+                            <span class="card-title">react组件间传值</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                props
+父传子：
+父-&gt;子 :在父组件中引入子组件，并且将值传入。
+子接收:在子组件中，采用this.props.xx
+
+
+
+1234render()&#123;    let &#123;传来的值的名字&#125; &#x3D;
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/public/categories/react/" class="post-category">
+                                    react
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/public/tags/react/">
+                            <span class="chip bg-color">react</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/11/22/react/react/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="react">
+                            
+                            <span class="card-title">react</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                 react 
+
+一：是什么
+是一个声明式，用独立简单的代码，组合成复杂的UI界面。最重要的就是组件二：组件React.Component的子类
+所有的组件都相当于是React.Component的子类。每一个自定义组件前都要添加这句话。
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/public/categories/react/" class="post-category">
+                                    react
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/public/tags/react/">
+                            <span class="chip bg-color">react</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

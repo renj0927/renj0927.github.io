@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据的请求, 啊！快进来学习">
+    <meta name="keywords" content="react, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据的请求 | 啊！快进来学习</title>
+    <title>react | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据的请求</h1>
+                    <h1 class="description center-align post-title">react</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/JS/">
-                                <span class="chip bg-color">JS</span>
+                            <a href="/public/tags/react/">
+                                <span class="chip bg-color">react</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/public/categories/JS/" class="post-category">
-                                JS
+                            <a href="/public/categories/react/" class="post-category">
+                                react
                             </a>
                         
                     </div>
@@ -473,26 +473,119 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一：ajax"><a href="#一：ajax" class="headerlink" title="一：ajax"></a>一：ajax</h3><h5 id="1：XMLHttpRequest对象"><a href="#1：XMLHttpRequest对象" class="headerlink" title="1：XMLHttpRequest对象"></a>1：XMLHttpRequest对象</h5><ul>
-<li>作用：在不刷新页面的情况下，请求URL，获取数据。<h5 id="2：使用ajax的步骤"><a href="#2：使用ajax的步骤" class="headerlink" title="2：使用ajax的步骤"></a>2：使用ajax的步骤</h5></li>
-<li>创建XmlHttpRequest对象。</li>
-<li>调用open方法设置基本请求信息。</li>
-<li>设置发送的数据，发送请求。</li>
-<li>注册<strong>监听</strong>的回调函数</li>
-<li>拿到返回值，对页面进行更新</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;1.创建Ajax对象</span><br><span class="line">    if(window.XMLHttpRequest)&#123;</span><br><span class="line">       var oAjax&#x3D;new XMLHttpRequest();</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">       var oAjax&#x3D;new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;2.连接服务器（打开和服务器的连接）</span><br><span class="line">    oAjax.open(&#39;GET&#39;, url, true);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;3.发送</span><br><span class="line">    oAjax.send();</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;4.接收</span><br><span class="line">    oAjax.onreadystatechange&#x3D;function ()&#123;</span><br><span class="line">       if(oAjax.readyState&#x3D;&#x3D;4)&#123;</span><br><span class="line">           if(oAjax.status&#x3D;&#x3D;200)&#123;</span><br><span class="line">              &#x2F;&#x2F;alert(&#39;成功了：&#39;+oAjax.responseText);</span><br><span class="line">              fnSucc(oAjax.responseText);</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">              &#x2F;&#x2F;alert(&#39;失败了&#39;);</span><br><span class="line">              if(fnFaild)&#123;</span><br><span class="line">                  fnFaild();</span><br><span class="line">              &#125;</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+                <center><h2> react </h2></center>
 
-<h3 id="二：fetch"><a href="#二：fetch" class="headerlink" title="二：fetch()"></a>二：fetch()</h3><h5 id="1：格式"><a href="#1：格式" class="headerlink" title="1：格式"></a>1：格式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(url,options).then(function()&#123;&#125;).then(function()&#123;&#125;)</span><br><span class="line">&#x2F;&#x2F; options中可以携带任何的头部信息。</span><br><span class="line">&#x2F;&#x2F; fetch()是一个全局的方法。会返回一个promise。这个promise会在请求响应后被resolve，并传回response对象。</span><br></pre></td></tr></table></figure>
-<h5 id="2-fetch中的get和post请求的区别"><a href="#2-fetch中的get和post请求的区别" class="headerlink" title="2:fetch中的get和post请求的区别"></a>2:fetch中的get和post请求的区别</h5><ul>
-<li>get<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const url &#x3D; &#39;https:&#x2F;&#x2F;big-appliance.tv.mi.com&#x2F;query_bar_code?bar_code&#x3D;&#39;+e.data ;&#x2F;&#x2F;数据拼接要注意。</span><br><span class="line">      fetch(url,&#123;method:&#39;GET&#39;&#125;).then(res&#x3D;&gt;res.json())</span><br><span class="line">      .then((response)&#x3D;&gt;&#123;</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></li>
-<li>post<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let url&#x3D;&#39;https:&#x2F;&#x2F;big-appliance.tv.mi.com&#x2F;api&#x2F;query_object&#39;;</span><br><span class="line">    let data&#x3D;&#123; &quot;image&quot;: uri, &quot;miid&quot;:Service.account.ID &#125;;</span><br><span class="line">    fetch(url,&#123;</span><br><span class="line">      method:&#39;POST&#39;,&#x2F;&#x2F; 这里就是fetch中可选的options。</span><br><span class="line">      body:JSON.stringify(data),</span><br><span class="line">    &#125;).then(res&#x3D;&gt;res.json())</span><br><span class="line">    .then((response) &#x3D;&gt; &#123;</span><br><span class="line">        &#125;))</span><br></pre></td></tr></table></figure></li>
-<li>options的选项还可以是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    body: JSON.stringify(data), &#x2F;&#x2F; must match &#39;Content-Type&#39; header</span><br><span class="line">    cache: &#39;no-cache&#39;, &#x2F;&#x2F; *default, no-cache, reload, force-cache, only-if-cached</span><br><span class="line">    credentials: &#39;same-origin&#39;, &#x2F;&#x2F; include, same-origin, *omit</span><br><span class="line">    headers: &#123;</span><br><span class="line">      &#39;user-agent&#39;: &#39;Mozilla&#x2F;4.0 MDN Example&#39;,</span><br><span class="line">      &#39;content-type&#39;: &#39;application&#x2F;json&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    method: &#39;POST&#39;, &#x2F;&#x2F; *GET, POST, PUT, DELETE, etc.</span><br><span class="line">    mode: &#39;cors&#39;, &#x2F;&#x2F; no-cors, cors, *same-origin</span><br><span class="line">    redirect: &#39;follow&#39;, &#x2F;&#x2F; manual, *follow, error</span><br><span class="line">    referrer: &#39;no-referrer&#39;, &#x2F;&#x2F; *client, no-referrer</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch">具体的fetch的文档</a><h5 id="3：fetch和ajax的区别"><a href="#3：fetch和ajax的区别" class="headerlink" title="3：fetch和ajax的区别"></a>3：fetch和ajax的区别</h5></li>
-<li>fetch不会接受或者发送cookies</li>
-<li>fetch()返回的promise将不会拒绝http的错误状态，即使响应是一个HTTP 404或者500。<h3 id="三：WebSocket"><a href="#三：WebSocket" class="headerlink" title="三：WebSocket"></a>三：WebSocket</h3><h3 id="四："><a href="#四：" class="headerlink" title="四："></a>四：</h3></li>
+<h3 id="一：是什么"><a href="#一：是什么" class="headerlink" title="一：是什么"></a>一：是什么</h3><ul>
+<li>是一个声明式，用独立简单的代码，组合成复杂的UI界面。最重要的就是组件<h3 id="二：组件"><a href="#二：组件" class="headerlink" title="二：组件"></a>二：组件</h3><h5 id="React-Component的子类"><a href="#React-Component的子类" class="headerlink" title="React.Component的子类"></a>React.Component的子类</h5></li>
+<li>所有的组件都相当于是React.Component的子类。每一个自定义组件前都要添加这句话。</li>
+<li>在react中，组件的本质就是一个函数。在return中添加想要返回的结构。</li>
+<li>大的应用中就可以将组件拆分成多个小的组件，嵌套在一起。</li>
+<li>react组件都必须像纯函数一样保护他们的props不被修改。</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">class Cat extends React.Compotent &#123; </span><br><span class="line">    render()&#123;</span><br><span class="line">        return &lt;h1&gt;hello , &#123;this.props.name&#125;&lt;&#x2F;h1&gt;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;等价于</span><br><span class="line">function Cat(props)&#123;</span><br><span class="line">    return &lt;h1&gt;hello , &#123;props.name&#125;&lt;&#x2F;h1&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h5 id="1：创建组件的步骤"><a href="#1：创建组件的步骤" class="headerlink" title="1：创建组件的步骤:"></a>1：创建组件的步骤:</h5><ul>
+<li>使用import语句引入react和RN相应的组件（RN自带的那种）</li>
+<li>函数===组件</li>
+<li>返回值就会渲染成一个react元素。</li>
+<li>如果想要在别的地方使用组件，需要将它暴露出去。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import React from &#39;react&#39;;</span><br><span class="line">import &#123; Text &#125; from &#39;react-native&#39;</span><br><span class="line"></span><br><span class="line">export default function cat()&#123;</span><br><span class="line">    return &lt;Text&gt;hello world&lt;&#x2F;Text&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2：一个组件建立到更新发生了什么"><a href="#2：一个组件建立到更新发生了什么" class="headerlink" title="2：一个组件建立到更新发生了什么"></a>2：一个组件建立到更新发生了什么</h5></li>
+<li>（ReactDOM.render()）调用ReactDOM.render()函数，并将<Welcome name='lily'/>传入作为参数。</li>
+<li>（调组件，传参）react调用welcome组件，并将name作为props传入。</li>
+<li>（元素作为返回值）welcome组件将<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;hello , lily&lt;&#x2F;h1&gt;</span><br></pre></td></tr></table></figure>
+元素作为返回值</li>
+<li>react dom 将dom节点高效的更新为<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;hello , lily&lt;&#x2F;h1&gt;</span><br></pre></td></tr></table></figure>
+。<h3 id="二：JSX"><a href="#二：JSX" class="headerlink" title="二：JSX"></a>二：JSX</h3></li>
+<li>JSX==JS+XML。 就是在组件中可以插入html的类似语法。</li>
+<li>? 只能有一个text标签吗</li>
+<li>可以像写js一样写一个框架，还可以设定子元素，然后包含很多的标签。这种写法就有点像js中的对象</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">const element &#x3D; (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;Hello!&lt;&#x2F;h1&gt;</span><br><span class="line">    &lt;h2&gt;Good to see you here.&lt;&#x2F;h2&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">);</span><br><span class="line">&#x2F;&#x2F;对象化</span><br><span class="line">const element &#x3D; &#123; </span><br><span class="line">type:&#39;div&#39;,</span><br><span class="line">props:&#123; </span><br><span class="line">    props:&#123;type:h1,</span><br><span class="line">    children:&#39;hello!&#39;&#125;</span><br><span class="line">    props:&#123;type:h2,</span><br><span class="line">    children:&#39;Good to see you here.&#39;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以在JSX中插入用户输入的内容，可以防止注入攻击<ul>
+<li>原理：react DOM 在渲染之前会进行转义，确保注入的都是自己明确编写的内容。 所有的内容都被转换成了字符串，这样就可以有效的防止XSS攻击。</li>
+</ul>
+</li>
+</ul>
+<h3 id="三：state状态-amp-生命周期"><a href="#三：state状态-amp-生命周期" class="headerlink" title="三：state状态 &amp; 生命周期"></a>三：state状态 &amp; 生命周期</h3><h5 id="state"><a href="#state" class="headerlink" title="state"></a>state</h5><ul>
+<li>state就是一个状态。相当于vue中的Data，只要更新组件的state，就会根据新的state重新渲染。但是，这个state只是组件内部能够使用，如果想要在别的页面使用，就要进行传值。需要注意三点：<ul>
+<li>1：state初始化—在组件的最初要使用一个constructor 来定义这个组件自己有的state。</li>
+<li>2： 更新state—使用setState来更新。(setState()是异步的，所以写的时候必须有回调函数。所以在准备数据再到更新的时候，会有一定的延时。调用这个就会调用render（）所以就会更新页面，但是延迟可能是个问题)</li>
+<li>3：调用different算法，判定是否要更新，这是他自有的判断。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1:constructor(props)&#123;</span><br><span class="line">    super(props)&#123;</span><br><span class="line">        this.state&#x3D;&#123; key: value,...&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">2:this.setState(&#123; key: value,... &#125;)</span><br><span class="line">3:</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>使用的场景：一般有用户输入，请求服务器，操作数据库等需要和后端数据打交道的地方，就需要state。一般就是构造几个无状态的组件。然后专门构建一个有状态的组件，用来进行传值。（就是别的组件不写state，专门有一个组件来取值和传值。就相当于是vue中的store，只不过这里是给他简化了写法。）</li>
+</ul>
+<h5 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h5><ul>
+<li>只有三个阶段，挂载，渲染，卸载。但是一般卸载不用，所以，只要关注挂载过程和更新过程就行。（其实就是react自己的api，直接调用就可以了，他就会在渲染的不同阶段调用。）</li>
+<li>挂载卸载过程：挂载就是组件状态的初始化，组件将相应的dom元素生成好后挂载到dom树的过程。<ul>
+<li>1：componentWillMount()— 在render方法之前执行。可以执行setState，但是最终的渲染只有一次（？？？）（渲染前）</li>
+<li>2：componentDidMount()— 在render方法之后执行。渲染之后再取值，这样会不会就会造成一种卡顿，但是是不是可以将那种后面才跳出的页面写在这里。（渲染后）</li>
+<li>3：componentWillUnmount()— 卸载只有一个方法。一般会执行一些清理方法。（？？？ 时间回收、清除定时器）</li>
+</ul>
+</li>
+<li>更新过程：父组件向下传递props或者组件自身执行setState时发生的一系列更新动作。<ul>
+<li>1：shouldComponentUpdate(nextProps,nextState)— 接受的参数是更新的props和state。让开发可以增加必要的判断条件，需要时更新，不需要时不更新。返回值是一个boolean。</li>
+<li>2： componentWillUpdate（）和componentDidUpdate（）— 同渲染的过程。will要提供更新的props和state。而did要提供更新前的值。</li>
+<li>3：componentWillReceiveProps(nextProps)— 不行了！！！！</li>
+</ul>
+</li>
+</ul>
+<h3 id="四：props属性"><a href="#四：props属性" class="headerlink" title="四：props属性"></a>四：props属性</h3><h3 id="五：事件处理"><a href="#五：事件处理" class="headerlink" title="五：事件处理"></a>五：事件处理</h3><ul>
+<li>事件基本上同dom中的事件处理，命名使用小驼峰写法。</li>
+<li>在react的写法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick&#x3D;&#123;事件名&#125;&gt;&lt;&#x2F;button&gt;</span><br><span class="line">&#x2F;&#x2F;事件是一个函数。</span><br></pre></td></tr></table></figure></li>
+<li>如果想要阻止事件，必须显式的使用preventDefault<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function handleClick(e) &#123;</span><br><span class="line">    e.preventDefault();</span><br><span class="line">    console.log(&#39;The link was clicked.&#39;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li>为元素添加一个监听器。不用使用addEventListener.在元素初始渲染的时候添加监听器即可。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;button onClick&#x3D;&#123;this.handleClick&#125;&gt;</span><br><span class="line">        &#123;this.state.isToggleOn ? &#39;ON&#39; : &#39;OFF&#39;&#125;</span><br><span class="line">      &lt;&#x2F;button&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li>向事件处理程序传递参数：？？this的绑定有关？不行了。</li>
+</ul>
+<h3 id="六：条件渲染与渲染"><a href="#六：条件渲染与渲染" class="headerlink" title="六：条件渲染与渲染"></a>六：条件渲染与渲染</h3><ul>
+<li>感觉，条件渲染基本上同vue中的渲染。可以使用if。可以使用三目<br>1:条件表达式渲染：在render函数中声明一个变量，引入全局的变量。然后在渲染模块的时候使用三目表达式（用于两个组件二选一）<br>2:&amp;&amp;操作符渲染<br>3:<br>4:<br>5:</li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaodi-js/p/9119826.html/">条件渲染的几种方式</a><h3 id="七：循环渲染"><a href="#七：循环渲染" class="headerlink" title="七：循环渲染"></a>七：循环渲染</h3><h5 id="1：-map和foreach"><a href="#1：-map和foreach" class="headerlink" title="1： map和foreach"></a>1： map和foreach</h5></li>
+<li>相同点：<ul>
+<li>都可以循环数组的每一项</li>
+<li>能循环获得的参数是item，index，arr。</li>
+<li>都可以在里面嵌套一个函数，来使用循环后的值。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var arr1 &#x3D; [0,2,4,6,8];</span><br><span class="line">var newArr1 &#x3D; arr1.forEach(function(item,index,arr1)&#123;</span><br><span class="line">  console.log(this);</span><br><span class="line">  console.log(arr1);</span><br><span class="line">   arr1[index] &#x3D; item&#x2F;2; </span><br><span class="line">&#125;,this);</span><br><span class="line">console.log(arr1);</span><br><span class="line">console.log(newArr1);</span><br><span class="line"></span><br><span class="line">var arr &#x3D; [0,2,4,6,8];</span><br><span class="line"> var newArr &#x3D; arr.map(function(item,index,arr)&#123;</span><br><span class="line">            console.log(this);</span><br><span class="line">            console.log(arr);</span><br><span class="line">            return item&#x2F;2;</span><br><span class="line"> &#125;,this);</span><br><span class="line"> console.log(newArr);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不同点：<ul>
+<li>map会循环遍历数组，并做一个返回。但foreach没有返回值。</li>
+<li>foreach改变原始数组。map返回新数组。（所以在循环渲染时使用的是map，因为map有返回值。）</li>
+</ul>
+</li>
+</ul>
+<p>2:一定要注意的点</p>
+<ul>
+<li><strong>一定要有key值！！！！！！！</strong> key值最好是列表中的独一无二的字符串。（通常用数据的id或者索引值来做key。）    <a target="_blank" rel="noopener" href="https://react.docschina.org/docs/reconciliation.html#recursing-on-children">key为什么是必须的</a>  key值要放在循环中。</li>
+</ul>
+<p>3：做过的例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;View style&#x3D;&#123;styles.foodValue&#125;&gt;&#123; foodValue.map((item,index) &#x3D;&gt; &#123;</span><br><span class="line">                   return ( </span><br><span class="line">                   &lt;View style&#x3D;&#123;styles.foodBox&#125; key&#x3D;&#123;index&#125;&gt; </span><br><span class="line">                        &lt;View style&#x3D;&#123;styles.foodItem&#125;&gt;</span><br><span class="line">                            &lt;Text style&#x3D;&#123;styles.fNum&#125;&gt;&#123;item.value&#125;&lt;&#x2F;Text&gt;</span><br><span class="line">                            &lt;Text style&#x3D;&#123;styles.fUnit&#125;&gt;&#123;item.unit&#125;&lt;&#x2F;Text&gt;</span><br><span class="line">                        &lt;&#x2F;View&gt;</span><br><span class="line">                        &lt;Text style&#x3D;&#123;styles.fWord&#125;&gt;&#123;item.name&#125;&lt;&#x2F;Text&gt;</span><br><span class="line">                    &lt;&#x2F;View&gt;)</span><br><span class="line">                &#125;</span><br><span class="line">                )&#125;&lt;&#x2F;View&gt;</span><br><span class="line">&#x2F;&#x2F; 使用一个map循环，然后在return的时候，一起带着要渲染的部分就可以。</span><br><span class="line">&#x2F;&#x2F; 上面的所有也可以写成一个const定义的变量，然后接着引用。</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="五：创建react项目"><a href="#五：创建react项目" class="headerlink" title="五：创建react项目"></a>五：创建react项目</h3><ul>
+<li>先安装全局的react <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g create-react-app</span><br></pre></td></tr></table></figure></li>
+<li>创建项目，安装依赖<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app 文件名</span><br></pre></td></tr></table></figure></li>
+<li>进入项目，启动项目</li>
+<li>可以在项目的src中添加需要的文件夹。pages-放路由组件，router-放路由js，store-放redux，utils-放js工具类<ul>
+<li>安装及配置路由  npm install react-router-dom –save-dev 在router文件下添加一个index.js来存放路由相关信息</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<h3 id="十：小杂项"><a href="#十：小杂项" class="headerlink" title="十：小杂项"></a>十：小杂项</h3><h4 id="1：ref"><a href="#1：ref" class="headerlink" title="1：ref"></a>1：ref</h4><ul>
+<li>是用来操纵react组件或DOM元素的接口。（就像是组件或元素的名字）</li>
+<li>使用方式：<ul>
+<li>string绑定：相当于用ref给一个dom节点起名字，之后就可以用this.ref.name来控制节点。但是最新版react已经不推荐使用了。可能会被遗弃。</li>
+<li>react.CreateRef()：使用它来创建一个变量，然后可以直接使用ref来调用这个变量。</li>
+<li>函数形式：将子组件暴露给父组件，使得父组件能够调用子组件的方法。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">inputRef &#x3D; React.createRef();</span><br><span class="line">...</span><br><span class="line">ref &#x3D; &#123;this.inputRef&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>在react中，能使用state解决的事就不要使用ref。</li>
+</ul>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
             </div>
             <hr/>
 
@@ -517,7 +610,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/js/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/">http://example.com/2020/11/22/js/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/</a>
+                    <a href="http://example.com/2020/11/22/react/react/">http://example.com/2020/11/22/react/react/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -555,8 +648,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
+                                <a href="/public/tags/react/">
+                                    <span class="chip bg-color">react</span>
                                 </a>
                             
                         </div>
@@ -730,13 +823,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/react/react/">
+                <a href="/2020/11/22/react/react%E7%BB%84%E4%BB%B6%E9%97%B4%E7%9A%84%E4%BC%A0%E5%80%BC/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="react">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="react组件间传值">
                         
-                        <span class="card-title">react</span>
+                        <span class="card-title">react组件间传值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,13 +872,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/flex%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/js/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="flex布局">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据的请求">
                         
-                        <span class="card-title">flex布局</span>
+                        <span class="card-title">数据的请求</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -802,8 +895,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/JS/" class="post-category">
+                                    JS
                                 </a>
                             
                             
@@ -813,8 +906,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>

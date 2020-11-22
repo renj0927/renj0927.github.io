@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据的请求, 啊！快进来学习">
+    <meta name="keywords" content="Redux, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据的请求 | 啊！快进来学习</title>
+    <title>Redux | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据的请求</h1>
+                    <h1 class="description center-align post-title">Redux</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/JS/">
-                                <span class="chip bg-color">JS</span>
+                            <a href="/public/tags/react/">
+                                <span class="chip bg-color">react</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/public/categories/JS/" class="post-category">
-                                JS
+                            <a href="/public/categories/react/" class="post-category">
+                                react
                             </a>
                         
                     </div>
@@ -473,25 +473,55 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="一：ajax"><a href="#一：ajax" class="headerlink" title="一：ajax"></a>一：ajax</h3><h5 id="1：XMLHttpRequest对象"><a href="#1：XMLHttpRequest对象" class="headerlink" title="1：XMLHttpRequest对象"></a>1：XMLHttpRequest对象</h5><ul>
-<li>作用：在不刷新页面的情况下，请求URL，获取数据。<h5 id="2：使用ajax的步骤"><a href="#2：使用ajax的步骤" class="headerlink" title="2：使用ajax的步骤"></a>2：使用ajax的步骤</h5></li>
-<li>创建XmlHttpRequest对象。</li>
-<li>调用open方法设置基本请求信息。</li>
-<li>设置发送的数据，发送请求。</li>
-<li>注册<strong>监听</strong>的回调函数</li>
-<li>拿到返回值，对页面进行更新</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;1.创建Ajax对象</span><br><span class="line">    if(window.XMLHttpRequest)&#123;</span><br><span class="line">       var oAjax&#x3D;new XMLHttpRequest();</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">       var oAjax&#x3D;new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;2.连接服务器（打开和服务器的连接）</span><br><span class="line">    oAjax.open(&#39;GET&#39;, url, true);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;3.发送</span><br><span class="line">    oAjax.send();</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;4.接收</span><br><span class="line">    oAjax.onreadystatechange&#x3D;function ()&#123;</span><br><span class="line">       if(oAjax.readyState&#x3D;&#x3D;4)&#123;</span><br><span class="line">           if(oAjax.status&#x3D;&#x3D;200)&#123;</span><br><span class="line">              &#x2F;&#x2F;alert(&#39;成功了：&#39;+oAjax.responseText);</span><br><span class="line">              fnSucc(oAjax.responseText);</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">              &#x2F;&#x2F;alert(&#39;失败了&#39;);</span><br><span class="line">              if(fnFaild)&#123;</span><br><span class="line">                  fnFaild();</span><br><span class="line">              &#125;</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+                <center><h3>Redux</h3></center>
 
-<h3 id="二：fetch"><a href="#二：fetch" class="headerlink" title="二：fetch()"></a>二：fetch()</h3><h5 id="1：格式"><a href="#1：格式" class="headerlink" title="1：格式"></a>1：格式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(url,options).then(function()&#123;&#125;).then(function()&#123;&#125;)</span><br><span class="line">&#x2F;&#x2F; options中可以携带任何的头部信息。</span><br><span class="line">&#x2F;&#x2F; fetch()是一个全局的方法。会返回一个promise。这个promise会在请求响应后被resolve，并传回response对象。</span><br></pre></td></tr></table></figure>
-<h5 id="2-fetch中的get和post请求的区别"><a href="#2-fetch中的get和post请求的区别" class="headerlink" title="2:fetch中的get和post请求的区别"></a>2:fetch中的get和post请求的区别</h5><ul>
-<li>get<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const url &#x3D; &#39;https:&#x2F;&#x2F;big-appliance.tv.mi.com&#x2F;query_bar_code?bar_code&#x3D;&#39;+e.data ;&#x2F;&#x2F;数据拼接要注意。</span><br><span class="line">      fetch(url,&#123;method:&#39;GET&#39;&#125;).then(res&#x3D;&gt;res.json())</span><br><span class="line">      .then((response)&#x3D;&gt;&#123;</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></li>
-<li>post<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let url&#x3D;&#39;https:&#x2F;&#x2F;big-appliance.tv.mi.com&#x2F;api&#x2F;query_object&#39;;</span><br><span class="line">    let data&#x3D;&#123; &quot;image&quot;: uri, &quot;miid&quot;:Service.account.ID &#125;;</span><br><span class="line">    fetch(url,&#123;</span><br><span class="line">      method:&#39;POST&#39;,&#x2F;&#x2F; 这里就是fetch中可选的options。</span><br><span class="line">      body:JSON.stringify(data),</span><br><span class="line">    &#125;).then(res&#x3D;&gt;res.json())</span><br><span class="line">    .then((response) &#x3D;&gt; &#123;</span><br><span class="line">        &#125;))</span><br></pre></td></tr></table></figure></li>
-<li>options的选项还可以是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    body: JSON.stringify(data), &#x2F;&#x2F; must match &#39;Content-Type&#39; header</span><br><span class="line">    cache: &#39;no-cache&#39;, &#x2F;&#x2F; *default, no-cache, reload, force-cache, only-if-cached</span><br><span class="line">    credentials: &#39;same-origin&#39;, &#x2F;&#x2F; include, same-origin, *omit</span><br><span class="line">    headers: &#123;</span><br><span class="line">      &#39;user-agent&#39;: &#39;Mozilla&#x2F;4.0 MDN Example&#39;,</span><br><span class="line">      &#39;content-type&#39;: &#39;application&#x2F;json&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    method: &#39;POST&#39;, &#x2F;&#x2F; *GET, POST, PUT, DELETE, etc.</span><br><span class="line">    mode: &#39;cors&#39;, &#x2F;&#x2F; no-cors, cors, *same-origin</span><br><span class="line">    redirect: &#39;follow&#39;, &#x2F;&#x2F; manual, *follow, error</span><br><span class="line">    referrer: &#39;no-referrer&#39;, &#x2F;&#x2F; *client, no-referrer</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch">具体的fetch的文档</a><h5 id="3：fetch和ajax的区别"><a href="#3：fetch和ajax的区别" class="headerlink" title="3：fetch和ajax的区别"></a>3：fetch和ajax的区别</h5></li>
-<li>fetch不会接受或者发送cookies</li>
-<li>fetch()返回的promise将不会拒绝http的错误状态，即使响应是一个HTTP 404或者500。<h3 id="三：WebSocket"><a href="#三：WebSocket" class="headerlink" title="三：WebSocket"></a>三：WebSocket</h3><h3 id="四："><a href="#四：" class="headerlink" title="四："></a>四：</h3></li>
+<hr>
+<h3 id="一：redux是什么"><a href="#一：redux是什么" class="headerlink" title="一：redux是什么"></a>一：redux是什么</h3><ul>
+<li>就是为了组件间的通信。视图与状态是一一对应的。所有的状态，都是保存在一个对象里面。<h3 id="二：redux有什么"><a href="#二：redux有什么" class="headerlink" title="二：redux有什么"></a>二：redux有什么</h3>1：store（仓库）</li>
+<li>创建：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createStore &#125; from &#39;redux&#39;;</span><br><span class="line">const store &#x3D; createStore(fn);&#x2F;&#x2F;接受另一个函数，返回新生成的store对象。</span><br><span class="line">&#x2F;&#x2F; createStore(fn（reducer），state最初的状态（一般是服务器给出的。window.STATE_FROM_SERVER)）)</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
+<p>2：state（状态）：所有store对象的数据。可以通过store.getState()获取。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const state &#x3D; store.getState();&#x2F;&#x2F;state是在view中的，和view绑定，state相同，view相同。</span><br></pre></td></tr></table></figure>
+
+<p>3：action（变化）：一个对象。action是view发出的通知。表示state要发生变化了。【type是必要的！！！】 <a target="_blank" rel="noopener" href="https://github.com/acdlite/flux-standard-action">可参考规范</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const action &#x3D; &#123;</span><br><span class="line">  type: &#39;ADD_TODO&#39;,&#x2F;&#x2F;action的名称（就是一个变量的大名）</span><br><span class="line">  payload: &#39;Learn Redux&#39;&#x2F;&#x2F;携带的信息，</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>也可定义函数来生成action<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const ADD_TODO &#x3D; &#39;添加 TODO&#39;;</span><br><span class="line"></span><br><span class="line">function addTodo(text) &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    type: ADD_TODO,</span><br><span class="line">    text</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const action &#x3D; addTodo(&#39;Learn Redux&#39;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>4：reducer(计算过程)：store收到action变化后，要给出一个新的state，这个计算过程就叫reducer。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const reducer &#x3D; function (state, action) &#123;</span><br><span class="line">  &#x2F;&#x2F; ...</span><br><span class="line">  return new_state;</span><br><span class="line">&#125;;</span><br><span class="line">&#x2F;&#x2F;state:是这个值原来的样子。action：监听变化的是谁。</span><br><span class="line">&#x2F;&#x2F;用一个switch（）来判断值是否有变化。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>拆分</li>
+</ul>
+<p>5：</p>
+<h3 id="三：redux怎么用"><a href="#三：redux怎么用" class="headerlink" title="三：redux怎么用"></a>三：redux怎么用</h3><p>1：和main文件同级创建一个store仓库。(在其中写一个index的入口文件，用来存放多个reducer文件，这样可以一起管理多个reducer.一个store用来初始化创建一个大仓库。还有一个自己要放入数据的地方。)</p>
+<p>2：新建store：store中要引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createStore, &#125; from &#39;redux&#39;; &#x2F;&#x2F;createstore 用来创建仓库</span><br><span class="line">import rootReducers from &#39;.&#x2F;index&#39;; 将index中的reducer统一初始化。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然后使用const 定义store，并将其暴露出去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const store &#x3D; createStore(</span><br><span class="line">    rootReducers</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">export default store; &#x2F;&#x2F;简陋的代码，还不需要使用到中间件</span><br></pre></td></tr></table></figure>
+
+<p>3:然后创建index值，将自己创建的单个仓库的名字暴露出去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import &#123; combineReducers &#125; from &#39;redux&#39;;</span><br><span class="line">import modeDataReducer from &#39;.&#x2F;mode_data&#39;;</span><br><span class="line"></span><br><span class="line">const rootReducers &#x3D; combineReducers(&#123;</span><br><span class="line">    mode : modeDataReducer,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">export default rootReducers</span><br></pre></td></tr></table></figure>
+
+<p>4：开始写自己的仓库，先是初始化数据，然后依次将写相应的action和reducer</p>
+<p>5:action 一般写成函数模式。一般action中定义的函数都是在view中使用的，这样就可以监听到数据的变换，从而改变store中的state。一般通过store。dispatch（）将action传到store  dispatch(setMode(change data)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export function setMode(value)&#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        type : &#39;modeChange&#39;, type用来表示将要执行的动作，不是必须的。但是这个type是用来给reducer做准备用的。告诉reducer哪里的值做了改变，这样reducer就可以知道改变来源，并作出计算，传递出来新的值。</span><br><span class="line">        value : value,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>6:reducer 定义一个函数，将state和action都传进去，然后使用switch函数，通过action.type来判断是谁变换了，作出计算。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const modeData &#x3D; (state &#x3D; init , action) &#x3D;&gt; &#123;</span><br><span class="line">    switch(action.type)&#123;</span><br><span class="line">        case &#39;modeChange&#39;:</span><br><span class="line">            return action.value;</span><br><span class="line">        case &#39;timeChange&#39;:</span><br><span class="line">            return action.value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">export default modeData;&#x2F;&#x2F;注意将这个地方要暴露出去。</span><br></pre></td></tr></table></figure>
+
+<p>7：使用。找到需要使用到store中数据的地方<code>import &#123; connect &#125; from &#39;react-redux&#39;;</code>这个connect是用来连接store的变化？？？和view的。<br>还要将action的type引入。</p>
+<p>需要汇总两个地方<br>从store中取出数据 mapStateToProps 里面主要是调用了一个scan用来取到store中的值</p>
+<h3 id="四：三个函数："><a href="#四：三个函数：" class="headerlink" title="四：三个函数："></a>四：三个函数：</h3><p>1：store.dispatch() 从view中把数据送去store。接受一个action作为参数，将它发送去store<br>2：store.getState()<br>3：store.subscribe()：监听函数。一旦state发送变化，就执行这个函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let unsubscribe &#x3D; store.subscribe(() &#x3D;&gt;</span><br><span class="line">  console.log(store.getState())</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">unsubscribe();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="五：使用步骤"><a href="#五：使用步骤" class="headerlink" title="五：使用步骤"></a>五：使用步骤</h3><p>1：在store文件夹中定义store.js新建一个仓库。将要写的函数（上面建仓时中的fn）写入一个index中（如果很多的话。）<br>2：在需要使用到store传递数据的组件中，import进去(action和store)<br>3：写相应的action.js（存放想要共享的值）和reducer.js（计算action的值，并作出改变）<br>4：<br>5：<br>6：<br>7：</p>
+<p>###<br>store中引入index中引入的仓库。（可将reducer和action合在一起。）<br>在自己的文件下scan.js 先初始化要在store中存放的数据。然后在case中定义这些值，值是使用</p>
+<p>未完待续</p>
 
             </div>
             <hr/>
@@ -517,7 +547,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/js/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/">http://example.com/2020/11/22/js/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/</a>
+                    <a href="http://example.com/2020/11/22/react/Redux/">http://example.com/2020/11/22/react/Redux/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -555,8 +585,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/JS/">
-                                    <span class="chip bg-color">JS</span>
+                                <a href="/public/tags/react/">
+                                    <span class="chip bg-color">react</span>
                                 </a>
                             
                         </div>
@@ -730,13 +760,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/react/react/">
+                <a href="/2020/11/22/react/RN%E4%B8%AD%E7%9A%84CSS/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="react">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="RN中的CSS">
                         
-                        <span class="card-title">react</span>
+                        <span class="card-title">RN中的CSS</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,13 +809,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/flex%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/react/RN%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="flex布局">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Redux">
                         
-                        <span class="card-title">flex布局</span>
+                        <span class="card-title">Redux</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -802,8 +832,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/react/" class="post-category">
+                                    react
                                 </a>
                             
                             
@@ -813,8 +843,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/react/">
+                        <span class="chip bg-color">react</span>
                     </a>
                     
                 </div>
