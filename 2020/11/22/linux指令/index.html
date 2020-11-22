@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 啊！快进来学习">
+    <meta name="keywords" content="linux命令, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 啊！快进来学习</title>
+    <title>linux命令 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">linux命令</h1>
                 </div>
             </div>
         </div>
@@ -430,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -460,19 +464,101 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2><center>linux命令</center></h2>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<hr>
+<ul>
+<li>cd 去到之前的目录(使用tab可以补全输入命令)<ul>
+<li>.   当前目录 </li>
+<li>..   退去上级目录 </li>
+<li>~  主目录  </li>
+<li>绝对路径（有/）与相对路径：相对是相对当前目录来说的。 去往不同的路径时使用绝对。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>pwd - 查看用户的当前目录</p>
+</li>
+<li><p>ls 显示当前目录信息(只显示普通文件)  </p>
+<ul>
+<li>-stat 显示文件详细信息  </li>
+<li>-ah 查看隐藏目录</li>
+<li>-a 可显示隐藏文件，.开头的文件</li>
+<li>-l：使用长格式列出文件，所有文件详情都列出</li>
+<li>-la ~:使用长格式列出所有的文件，包括隐藏文件。</li>
+<li>-r：文件以相反的次序显示</li>
+<li>-t：根据最后修改时间改变</li>
+<li>-ltr s*：列出所有开头是s的文件</li>
+</ul>
+</li>
+<li><p>mkdir[参数]-[目录]-在当前目录下，创建一个空目录</p>
+<ul>
+<li>-p：创建多级目录</li>
+<li>-v：显示目录的常见过程</li>
+</ul>
+</li>
+<li><p>rmdir-删除当前目录</p>
+</li>
+<li><p>touch-创建一个任意格式的文件 记得加后缀</p>
+</li>
+<li><p>cp-复制文件。cp[参数]-[文件]（还有很多的option）</p>
+<ul>
+<li>-f [文件]-[文件重命名]：复制直接覆盖原文件</li>
+<li>-i：会询问是否覆盖</li>
+<li>-v：显示cp的执行过程</li>
+<li>-R：复制目录</li>
+<li>-r：一次复制多个文件</li>
+</ul>
+</li>
+<li><p>mv 文件+移去目录：移动文件 </p>
+<ul>
+<li>-i：存在同名文件，则会询问是否覆盖</li>
+</ul>
+</li>
+<li><p>cat-查看文本文件的内容</p>
+<ul>
+<li>\n：加行号显示</li>
+</ul>
+</li>
+<li><p>more：查看内容长的文本</p>
+</li>
+<li><p>echo 文件重定向，有则打开，无则创建</p>
+</li>
+<li><p>gzip,bzip2,tar -czvf,-文件压缩命令</p>
+</li>
+<li><p>gzip -d,bzip2 -d,tar -xzvf,-解压命令</p>
+</li>
+<li><p>man  显示命令的使用 q用来退出</p>
+</li>
+<li><p>clear 清空屏幕</p>
+</li>
+<li><p>*kill-杀死进程， 用ps（静态进程快照）top（动态进程）查找进程，然后kill+pid    sudo lsof -i :端口 -查找响应的端口号(kill也要加sudo)(就我个人而言，蛮常用的)</p>
+</li>
+<li><p>alias 对命令重命名 别名=指令名(使用这个查看git的一些缩写简写命令)</p>
+</li>
+<li><p>ssh[参数]-[主机]：登录远程服务器。给予ssh加密协议实现安全的远程登录服务器，实现对服务器的管理</p>
+<ul>
+<li><p>1/2：强制使用 ssh 协议版本 1/2</p>
+</li>
+<li><p>4/6：强制使用 ipv4/6 地址</p>
+</li>
+<li><p>f：后台执行ssh指令</p>
+</li>
+<li><p>l&lt;登录名&gt;：指定连接远程服务器的登录用户名</p>
+</li>
+<li><p>p&lt;端口&gt;：指定远程服务器上的端口</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>vim  终端打开文件。vi+文件名-进入文件 按s进入insert开始修改，修改完成后按一下esc调出vi命令，输入:wq保存并退出vi模式。</li>
+<li>open 是在外部打开文件。</li>
+</ul>
+<p>注：shell:是一个用shell编写的脚本程序。有许多种类：bash，dash，zsh等</p>
+<p>​      bash：（默认）有很灵活和强大的编程接口，同时又有很友好的用户界面。功能包括命令补齐、通配符、命令历史记录、别名等。</p>
+<p>​      dash：bash的弟弟，功能没有bash多。</p>
+<p>​      zsh：最新的，所有shell的集合+增加功能。改进的shell选项处理、shell兼容性模式以及可加载模块。</p>
 
             </div>
             <hr/>
@@ -498,7 +584,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/hello-world/">http://example.com/2020/11/22/hello-world/</a>
+                    <a href="http://example.com/2020/11/22/linux%E6%8C%87%E4%BB%A4/">http://example.com/2020/11/22/linux%E6%8C%87%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,7 +621,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -707,13 +797,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">
+                <a href="/2020/11/22/md%E7%9A%84%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Chrome调试技巧">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="md常用语法总结">
                         
-                        <span class="card-title">Chrome调试技巧</span>
+                        <span class="card-title">md常用语法总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -749,16 +839,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/hello-world/">
+                <a href="/2020/11/22/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="项目中的记录和感想">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">项目中的记录和感想</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,7 +869,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
+                        <span class="chip bg-color">杂项</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

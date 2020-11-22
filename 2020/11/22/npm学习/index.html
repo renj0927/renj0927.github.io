@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 啊！快进来学习">
+    <meta name="keywords" content="npm学习总结, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 啊！快进来学习</title>
+    <title>npm学习总结 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">npm学习总结</h1>
                 </div>
             </div>
         </div>
@@ -430,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%9D%82%E9%A1%B9/">
+                                <span class="chip bg-color">杂项</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -460,19 +464,42 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h3 id="npm学习总结"><a href="#npm学习总结" class="headerlink" title="npm学习总结"></a>npm学习总结</h3><h4 id="一些指令："><a href="#一些指令：" class="headerlink" title="-一些指令："></a>-一些指令：</h4><h5 id="初始化"><a href="#初始化" class="headerlink" title="-初始化:"></a>-初始化:</h5><p>​        -npm init  npm init -y (自动生成package.json)—npm i。npm i express 可以一次安装多个包。</p>
+<p>​        -npm i -g pkg：在全局安装包。</p>
+<p>​        -npm i -S(–save) pkg：安装包作为依赖。–dep</p>
+<p>​        -npm i -D(–save-dev pkg):安装包作为开发依赖。–devD</p>
+<p>​        -npm config set —初始化默认配置。还可以配置其他的源来安装js包。使用不同团队的东西之前要注意切换set的地址。<code>npm set registry http://registry-npm.firstshare.cn</code></p>
+<p>​            -npm config ls -l—查看npm内部的默认配置参数。</p>
+<p>​        -npm preinstall–客户无感知安装。 项目的 <code>package.json</code> 里增加 <code>preinstall</code> 要执行的脚本，这样合作方可以无感知的安装。</p>
+<p>​        -npm ci—全新的安装包，对package-lock.json友好。</p>
+<h5 id="运行测试："><a href="#运行测试：" class="headerlink" title="-运行测试："></a>-运行测试：</h5><p>​        -npm test（t）—</p>
+<h5 id="查看项目中可用脚本："><a href="#查看项目中可用脚本：" class="headerlink" title="-查看项目中可用脚本："></a>-查看项目中可用脚本：</h5><p>​        -cat package.json</p>
+<h5 id="npm-scripts："><a href="#npm-scripts：" class="headerlink" title="-npm scripts："></a>-npm scripts：</h5><p>​        -作用：预定义前后钩子，自定义脚本。</p>
+<p>​        -npm run env：列出项目中所有的npm环境变量</p>
+<h5 id="删除重复的包："><a href="#删除重复的包：" class="headerlink" title="-删除重复的包："></a>-删除重复的包：</h5><p>​        -npm dedupe(ddp)—删除重复的依赖项。</p>
+<h5 id="扫描应用程序中的漏洞："><a href="#扫描应用程序中的漏洞：" class="headerlink" title="-扫描应用程序中的漏洞："></a>-扫描应用程序中的漏洞：</h5><p>​        -npm audit —扫描项目中的任何依赖中的任何漏洞。npm audit fix 会自动安装所有漏洞包的补丁版本。</p>
+<h5 id="本地测试你的软件包："><a href="#本地测试你的软件包：" class="headerlink" title="-本地测试你的软件包："></a>-本地测试你的软件包：</h5><p>​        -npm link (模块名)：实现任意位置的npm模块命令的全局可执行。（不加模块名则是开发一个全局的模块。）</p>
+<h5 id="列出所有已安装的软件包："><a href="#列出所有已安装的软件包：" class="headerlink" title="-列出所有已安装的软件包："></a>-列出所有已安装的软件包：</h5><p>​        -npm list（ls）—加depth=1可以限制搜索深度。</p>
+<h5 id="拓展nrm"><a href="#拓展nrm" class="headerlink" title="-拓展nrm:"></a>-拓展nrm:</h5><p>​            -nrm ls—查看已有的npm</p>
+<p>​            -nrm add 源名称 url—添加相关源</p>
+<p>​            -nrm del 源名称—删除相关源</p>
+<p>​            -nrm use 源名称—切换相关源</p>
+<p>​            -nrm test —测试源速度</p>
+<h4 id="工程上使用到npm的地方："><a href="#工程上使用到npm的地方：" class="headerlink" title="-工程上使用到npm的地方："></a>-工程上使用到npm的地方：</h4><p>​    -node_modules目录：每个包都会将该包的依赖安装到当前包所在的<code>node_modules</code>目录中。（包要使用的依赖都会安装在里面。）从npm5.x增加了package-lock.json</p>
+<p>​    -package-lock.json的详细描述主要由version、resolved、integrity、dev、requires、dependencies这几个字段构成：</p>
+<p>​        -version—版本</p>
+<p>​        -resolved—安装源</p>
+<p>​        -interity—表明包完整性的hash值（验证包是否失效）</p>
+<p>​        -dev—如果为true，则此依赖关系仅是顶级模块的开发依赖关系或者是一个的传递依赖关系</p>
+<p>​        -requires—依赖包所需要的所有依赖项，对应依赖包<code>package.json</code>里<code>dependencies</code>中的依赖项。</p>
+<p>​        -dependencies—依赖包<code>node_modules</code>中依赖的包，与顶层的<code>dependencies</code>一样的结构</p>
+<h4 id="拓展—package-json中的配置："><a href="#拓展—package-json中的配置：" class="headerlink" title="拓展—package.json中的配置："></a>拓展—package.json中的配置：</h4><p>​    -scripts：存放一些npm run xx相关的指令。会告诉你指令相关运行时什么。也可以自定义脚本命令。（npm run有串行&amp;&amp;和并行&amp;两种）执行相应命令时都会执行Pro/post钩子函数。钩子函数中定义了命令执行前后的命令。</p>
+<p>​    -dependencies：基本依赖，写在一个简单的对象中，将依赖程序包映射到版本范围。(就是项目在线上运行时所要使用到的依赖。）</p>
+<p>​    -devDependencies：是开发时所要使用到的依赖，在线上时并不需要他们。</p>
+<p>​        -包含什么：构建工具（webpack相关:为了生成生成环境代码。线上使用的代码是他们的工作结果）预处理器（css的相关预编译器，js中的ts，coffee-script，babel等）测试工具（chai，e2e等）其他（webpack-dev-server 支持开发热加载，线上是不用的。等这样的东西。）</p>
+<p>​    -peerDependencies、bundleDependencies、optionalDependencies：作为npm包的发布者需要考虑使用的。后面再讲。</p>
+<p>​    -注意版本号前的^和~：前者被优先考虑，是会把当前库中的最新版本更新到当前使用的最新版本。比如3.3.4，库会匹配3.x中的最新版本。（作用于版本号的第一个值）后者则是作用域版本号的中间的号。比如3.3.4，库会匹配3.3.x中最新版本。</p>
+<p>/*注：babel-runtime 是 dependencies 而不是 devDependencies。</p>
 
             </div>
             <hr/>
@@ -498,7 +525,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/hello-world/">http://example.com/2020/11/22/hello-world/</a>
+                    <a href="http://example.com/2020/11/22/npm%E5%AD%A6%E4%B9%A0/">http://example.com/2020/11/22/npm%E5%AD%A6%E4%B9%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,7 +562,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E6%9D%82%E9%A1%B9/">
+                                    <span class="chip bg-color">杂项</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -707,13 +738,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">
+                <a href="/2020/11/22/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Chrome调试技巧">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="git的基础命令">
                         
-                        <span class="card-title">Chrome调试技巧</span>
+                        <span class="card-title">git的基础命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -737,8 +768,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                        <span class="chip bg-color">杂项</span>
+                    <a href="/tags/">
+                        <span class="chip bg-color">./</span>
                     </a>
                     
                 </div>
@@ -749,16 +780,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/hello-world/">
+                <a href="/2020/11/22/md%E7%9A%84%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="md常用语法总结">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">md常用语法总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,7 +810,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
+                        <span class="chip bg-color">杂项</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

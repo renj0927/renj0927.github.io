@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 啊！快进来学习">
+    <meta name="keywords" content="JS常用方法, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 啊！快进来学习</title>
+    <title>JS常用方法 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">JS常用方法</h1>
                 </div>
             </div>
         </div>
@@ -430,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%85%84%E5%BC%9F/">
+                                <span class="chip bg-color">前端三兄弟</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -460,19 +464,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2><center>数组</center></h2>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<hr>
+<h4>数组迭代：</h4>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>​- every(过滤器函数):迭代数组中的每一个函数，直到出现false。<br>​- some:同every相反，直到返回true。<br>​- forEach():和使用for相同。<br>​- map():创建了新数组，每一个都迭代<br>​- filter():创建新数组，只存放返回值是true的那个。</p>
+<p>-数组缩小：</p>
+<p>​    -reduce(function(preV,curV,idx,arr)):内部函数会返回一个叠加到累加器的值。常用于数组所有元素求和。</p>
+<p>​    -reduceRight():从最后一项到第一项</p>
+<p>-数组转换：</p>
+<p>​    -array.toString():</p>
+<p>​    -array.valueOf:将数组作为字符串返回。</p>
+<p>​    -array.join(不同连接符):将数组元素连接成串。</p>
+<p>-数组的栈方法:(用来操作队列尾部)</p>
+<p>​    -array.push():移入队尾</p>
+<p>​    -array.pop():删除队尾</p>
+<p>-数组的队列方法:(用来操作数组的头部，来模拟队列)</p>
+<p>​    -array.push():推入队尾</p>
+<p>​    -array.shift():将数组第一个值移除。</p>
+<p>​    -array.unshift():将数组第一个值加入。可以用来模拟反向队列。</p>
+<p>-数组重排序方法：</p>
+<p>​    -array.reverse():只能翻转</p>
+<p>​    -array.sort(比较函数):通常结合比较函数一起使用。</p>
+<p>-数组操作方法：</p>
+<p>​    -array.concat(array)–拼接，创建一个新数组</p>
+<p>​    -array.slice(start,end):分割，返回分割后的数组，不会影响原数组。</p>
+<p>​    -array.splice(index,number)/(start,end,添加的元素):可以删除，插入，替换。是功能最强大的数组方法。</p>
+<p>-数组位置方法：</p>
+<p>​    -array.indexOf(index,查找起点):输出与搜索值相同的第一个值的索引。</p>
+<p>​    -array.lastIndexOf(同上)：</p>
+<h5 id="Data类型："><a href="#Data类型：" class="headerlink" title="-Data类型："></a>-Data类型：</h5><p><code>Var now = new Data();</code> 在不传参的情况下，直接获取当前时间（系统还是本地？）</p>
+<p>-Data.parse(data string)：会将字符串转换成日期。但不同浏览器的解析不同。</p>
+<p>-Data.now():返回当前时间的毫秒数。在不支持使用的浏览器中，可以使用+new 把对象转换成字符串。</p>
+<p>-toUTCString():实现特定于实现的格式显示时分秒 ？？？</p>
+<h5 id="RegExp类型："><a href="#RegExp类型：" class="headerlink" title="-RegExp类型："></a>-RegExp类型：</h5><p>-用来支持正则表达式（就是为了查找使用的），<code>var expression = / pattern / flags</code> </p>
+<p>pattern-正则表达式。flags-标识，有g(全局模式，模式被使用于所有字符串),i（不区分大小写）,m（多行模式）</p>
+<p>-实例属性：regexp.global/ignoreCase/multiline-布尔，看是否设置了g，i，m .lastIndex-整数，开始搜索下一个匹配项的字符位置,source-正则的字符串表达式。</p>
+<p>​    </p>
 
             </div>
             <hr/>
@@ -498,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/hello-world/">http://example.com/2020/11/22/hello-world/</a>
+                    <a href="http://example.com/2020/11/22/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">http://example.com/2020/11/22/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,7 +564,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%85%84%E5%BC%9F/">
+                                    <span class="chip bg-color">前端三兄弟</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -707,13 +740,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">
+                <a href="/2020/11/22/vue%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Chrome调试技巧">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="vue">
                         
-                        <span class="card-title">Chrome调试技巧</span>
+                        <span class="card-title">vue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -737,8 +770,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                        <span class="chip bg-color">杂项</span>
+                    <a href="/tags/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/">
+                        <span class="chip bg-color">vue全家桶</span>
                     </a>
                     
                 </div>
@@ -749,16 +782,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/hello-world/">
+                <a href="/2020/11/22/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="git的基础命令">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">git的基础命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,7 +812,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/">
+                        <span class="chip bg-color">./</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

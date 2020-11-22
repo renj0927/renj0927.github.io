@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 啊！快进来学习">
+    <meta name="keywords" content="vuex的简单学习, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 啊！快进来学习</title>
+    <title>vuex的简单学习 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">vuex的简单学习</h1>
                 </div>
             </div>
         </div>
@@ -430,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -460,19 +464,47 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2><center>为什么会有vuex<center></h2>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<hr>
+<p>&nbsp;&nbsp;还记得组件间的传值吗？如果不记得了，回去这里看看哦。<a href="">vue的组件传值</a>。兄弟组件之间的传值不是很方便，就算是父子之间，如果项目变大，组件变多了，这样的传值就会非常的混乱，自己也会被绕进去。这时候有一个状态管理就非常的好了。所以vuex就出来啦！</p>
+<h2><center>vuex的使用</center></h2>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>安装：<ul>
+<li>使用npm install vuex -save // yarn add vuex</li>
+<li>使用vue-cli3来直接创建有vuex的项目</li>
+</ul>
+</li>
+<li>使用：<br>  1：在vue3项目中。在store文件夹下添加一个index.js文件(用来做状态管理的)<br>  2：在文件中写入import vuex form ‘vuex’ 和 import vue from ‘vue’<br>  3:同文件下  vue.use(vuex);<code>export default new Vuex.store(&#123;modules:&#123; 里面放入需要使用vuex中数据的模块。&#125;&#125;)</code><br>  4：将store文件下的index.js在主目录下的main.js中引用。import store from ‘yourpath’  在new vue({store,})(将这个store作为一个全局的仓库)<br>  5：在组件中使用这个值，就在<code>&#123;&#123;$store.state.num&#125;&#125; </code>或 在compute中写一个函数，然后return this.$store.state.num（写在computed会好一些）<br>注：使用一个变量export一个，不然的话页面会渲染错误。<h2><center>5个部分</center></h2>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<ul>
+<li>state:相当于组件的数据，用来存放全局的数据。state是一个对象。这里的对象里的值，就被vue中的computed属性返回。（计算属性中写一个函数，然后返回vuex中的值，这样就可以直接使用。计算属性是一个属性，调用时就按照属性调用。）this.$store.state.data改变时，当都会重新求取计算属性，并且触发更新相关联的DOM。<figure class="highlight plain"><figcaption><span>&#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  count () &#123;</span><br><span class="line">    return this.$store.state.count</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>getters:相当于组件中的computed，getters是全局的，computed是各自组件中的。组件中统一使用的数据，就可以放在getters中。<br>store的getters中：<code>getNum(state)&#123;return state.num &#125;</code><br>组件中：<code>&#123;&#123;$store.getters.getNum&#125;&#125;</code></li>
+<li>actions:做异步方法（在点击之后可能需要请求参数时使用），实际修改状态值的还是mutations。所以事件是写在mutations中，在actions中调用<br>store的mutations：<code>decrease(state)&#123;state.num--;&#125; &#125;</code><br>store的actions中：<code>decreaseAsync(context)&#123;context.commit(&#39;decrease&#39;)&#125;</code><br>组件中：<code>&#123;&#123;$store.dispatch('decreaseAsync')&#125;&#125;</code><br>注：mutations中也要记得写。</li>
+<li>mutations:相当于是组件中的methods,但是不能使用异步方法（定时器，axios）=&gt;同步。更改store中状态的唯一方法。<br>store的mutations中：<code>add(state,payload)&#123;state.num++&#125;</code><br>组件中：<code>methods:&#123;addFn()&#123;this.$store.commit(&#39;add&#39;,加参)&#125;&#125;</code><br>注：payload是一个形参，如果组件在commit时，有传这个参数过来，就存在，如果没有传就是undefined。（可以通过传过来的payload来改变state中的值）</li>
+<li>modules:<ul>
+<li>namespaced：命名空间。可以使模块有更高的封装度和复用性，</li>
+</ul>
+</li>
+</ul>
+<p>注：使用那一部分，就引用哪一个变量，不然就会报错。</p>
+<h2><center>map*</center></h2>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<hr>
+<ul>
+<li>可以使用<code>import &#123; mapState &#125; from &#39;vuex&#39;</code>将vuex映射过来<blockquote>
+<p>computed中，写入…mapState([‘num’]),这样在模板中，就可以直接用<br>注：同理可以引入mapGetters，mapMutations，mapActions，其他写法同上。</p>
+</blockquote>
+</li>
+<li>mapState,mapGetters都写在computed中。</li>
+<li>mapMutations，mapActions都写在methods中。</li>
+<li>mapState辅助函数：就是将一个大的index拆分成5个分开的.js文件。</li>
+</ul>
 
             </div>
             <hr/>
@@ -498,7 +530,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/hello-world/">http://example.com/2020/11/22/hello-world/</a>
+                    <a href="http://example.com/2020/11/22/vuex/">http://example.com/2020/11/22/vuex/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,7 +567,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -703,62 +739,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">
+                <a href="/2020/11/22/vuex/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Chrome调试技巧">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="vuex的简单学习">
                         
-                        <span class="card-title">Chrome调试技巧</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                        <span class="chip bg-color">杂项</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/11/22/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">vuex的简单学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -780,6 +772,59 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/22/keep-alive/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="保存当前页面状态的方法">
+                        
+                        <span class="card-title">保存当前页面状态的方法</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue%E5%85%A8%E5%AE%B6%E6%A1%B6/">
+                        <span class="chip bg-color">vue全家桶</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

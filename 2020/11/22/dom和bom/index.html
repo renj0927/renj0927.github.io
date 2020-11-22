@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 啊！快进来学习">
+    <meta name="keywords" content="DOM和BOM, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 啊！快进来学习</title>
+    <title>DOM和BOM | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">DOM和BOM</h1>
                 </div>
             </div>
         </div>
@@ -430,9 +430,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%85%84%E5%BC%9F/">
+                                <span class="chip bg-color">前端三兄弟</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -460,19 +464,103 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h4 id="dom：HTML和XML的应用程序接口"><a href="#dom：HTML和XML的应用程序接口" class="headerlink" title="dom：HTML和XML的应用程序接口"></a>dom：HTML和XML的应用程序接口</h4><p>-用来实现页面的动态交互效果。html的每一个标签都能成为dom的一个节点。</p>
+<p>​    -节点分类：-文档<del>：文档本身。-元素</del>：所有的html元素。-属性<del>：html元素内的属性。-文本</del>：元素内的文本。-注释~：html中的注释。</p>
+<p>-获取元素：</p>
+<p><code>document.getElementById(&#39;xxx&#39;) //通过Id来获取对象，后面的都是数组    document.getElementsByTagName(&#39;div&#39;)[0] //通过标签名获取(获取第1个div标签) document.getElementsClassName(&#39;red&#39;)[0] //获取第1个class=&#39;red&#39;的元素</code></p>
+<p>（上面方法在兼容IE的情况下再使用）</p>
+<p><code>document.querySelector(&#39;&#39;) //获取元素(第一个遇到的)     document.querySelectorAll(&#39;div&#39;) //获取所有含有div的元素         document.querySelectorAll(&#39;div&#39;)[0] //获取第一个div标签</code></p>
+<p>（常用的）</p>
+<p>-新增节点：</p>
+<p><code>document.createElement()//标签节点</code></p>
+<p><code>document.createTextNode()//文本节点</code></p>
+<p><code>div1.appendChild(text1)      div1.innerText = &#39;你好&#39;    div1.textContent = &#39;你好&#39;//将文本节点插入到元素中去。</code></p>
+<p><code>document.body.appendChild(div1)     div1.appendChild(text1)//将在页面中的元素插到页面中。</code></p>
+<p><code>let text2 = text1.cloneNode.call(text1,true)//true-深拷贝，false-浅拷贝。</code>//拷贝的原因是节点只能被添加一次，不能重复使用，如果想要重复使用就要拷贝。</p>
+<p>-获取属性：dom对象.属性=“xxx”</p>
+<p>-删除节点：</p>
+<p>div.parentNode.removeChild(div1) //从树种删除节点</p>
+<p>-改属性：</p>
+<p>div.className //修改class</p>
+<p>div.style//修改style</p>
+<p>div.dataset//?</p>
+<p>-修改节点：</p>
+<p>​    -appendChild()//指定节点的最后一个节点列表后添加一个新的子节点</p>
+<p>​    -insertBefore()//将一个给定节点插入到一个给定元素节点的给定子节点的前面</p>
+<p>​    -removeChild()//从一个给定元素中删除子节点</p>
+<p>​    -replaceChild()//把一个给定父元素里的一个子节点替换为另外一个节点</p>
+<p>-访问节点：</p>
+<p>​    -<code>document.documentElement //获取html元素</code></p>
+<p>​    -<code>document.head //获取head元素</code></p>
+<p>​    -<code>document.body //获取body元素</code></p>
+<pre><code> -`window //获取窗口，可通过`</code></pre>
+<p>​    -<code>window.onclick 对窗口进行监听</code> </p>
+<p>​    -<code>document.all //获取所有的标签</code></p>
+<p>-node节点的特性和方法：</p>
+<p>​    -firstChild //获取第一个子节点</p>
+<p>​    -lastChild//获取最后一个子节点</p>
+<p>​    -parentNode//指向父节点</p>
+<p>​    -ownerDocument//指向这个节点所属的文档</p>
+<p>​    -childNodes//所有子节点列表</p>
+<p>​    -hasChildNodes() //Boolean，当childNodes包含一个或多个节点时，返回真值</p>
+<p>-dom事件：    </p>
+<p>​    -冒泡事件：从内向外</p>
+<p>​    -捕获事件：从外向内</p>
+<p>​    -阻止冒泡：</p>
+<p>​        -event.stopPropagation()    event.stopImmediatePropagtion()–阻止剩下的事件处理程序被执行</p>
+<p>​        -preventDefault()–</p>
+<p>​        -innerText–表示起始标签和结束标签之间的文本、innerHTML–表示元素的所有元素和文本的HTML代码、outerText–替换的是整个目标节点，返回的和innerText相同、outerHTML–同上</p>
+<p>​    -事件监听函数：</p>
+<p>​        -oDiv.onclick = function(){}//默认冒泡</p>
+<p>​        -attachEvent() ，detachEvent()//在IE中使用？//都有两个参数–事件动作，回调函数。//在使用attachEvent()方法中，事件处理程序会在全局作用域中运行。</p>
+<p>​        -addEventListener()和removeEventListener()//用来分配和移除事件处理函数//三个参数：事件名称，要分配的函数，事件阶段是在什么阶段。</p>
+<p>​        -addHandler()，removeHandler()//跨浏览器的事件处理程序//addHandler()方法属于一个叫EventUntil()的对象，这两个方法均接受三个相同的参数，要操作的元素，事件名称和回调函数。</p>
+<p>-事件类型：(在前面加上了on-就变为了一个事件处理程序)</p>
+<p>​    -鼠标~：click-点击、dbclick-双击、mousedown-鼠标按下、mouseup-鼠标抬起、mouseover-鼠标移上、mouseout-鼠标移开、mousemove-鼠标移动</p>
+<p>​    -键盘~：keydown-按键按下的过程、keypress-键被按下、keyup-按键松开</p>
+<p>​    -HTML~：load-加载、abort-中途停止ajax请求、select-添加/触发select事件、change-添加/触发 change 事件、submit-添加/触发 submit 事件、 resize-添加/触发 resize 事件、scroll-添加/触发scroll 事件、focus-元素聚焦、blur-元素失焦</p>
+<p>​    </p>
+<h4 id="Bom-用于处理浏览器窗口和框架。"><a href="#Bom-用于处理浏览器窗口和框架。" class="headerlink" title="Bom:用于处理浏览器窗口和框架。"></a>Bom:用于处理浏览器窗口和框架。</h4><p>-就是对浏览器的一些window窗口的操作的一些控制。</p>
+<p>-bom对象方法：alert()-弹出警示,confirm()-确认框，返回boolean值，prompt()-输入框，返回提示框中的值，方法可以调用系统对话框向用户显示消息。</p>
+<p>-bom对象：</p>
+<p>​    -navigator：导航器对象，控制一些浏览器信息</p>
+<p>​        -appCodeName：返回浏览器的代码名</p>
+<p>​        -appName：浏览器名称    </p>
+<p>​        -appVersion：浏览器的平台和版本信息</p>
+<p>​        -cookieEnabled：指明浏览器中是否启用cookie的布尔值</p>
+<p>​        -platform：运行浏览器的操作系统平台</p>
+<p>​        -userAgent：返回由客户机发送服务的user-agent头部的值</p>
+<p>​    -screen：显示器对象</p>
+<p>​        -availHeight：显示屏幕可用高度</p>
+<p>​        -availWidth：显示屏幕可用宽度</p>
+<p>​        -height：屏幕的像素高度</p>
+<p>​        -width：屏幕的像素宽度</p>
+<p>​        -colorDepth：屏幕颜色位数</p>
+<p>​    -history：历史对象，包含用户访问过的URL。</p>
+<p>​        -back():加载前一个url</p>
+<p>​        -forward：加载下一个url</p>
+<p>​        -go(num)：加载url表中相应的位置，-1-上一个url</p>
+<p>​    -location：与当前窗口加载的文档相关的信息。</p>
+<p>​        -属性</p>
+<p>​            -hash：设置或返回从#开始的url</p>
+<p>​            -search：从？开始的url</p>
+<p>​            -host：主机名和当前的url的端口号</p>
+<p>​            -hostname：主机名</p>
+<p>​            -port：端口号</p>
+<p>​            -pathname：路径</p>
+<p>​            -protocol：当前url的协议</p>
+<p>​            -href：设置或返回完整的url</p>
+<p>​        -方法</p>
+<p>​            -assign(url)：加载新文档</p>
+<p>​            -reload：重新加载当前文档</p>
+<p>​            -replace：用新的文档代替当前文档</p>
+<p>​    -document：文档对象</p>
+<p>​            -方法：</p>
+<p>​                -open：打开新的，擦除旧的</p>
+<p>​                -close：关闭文档输出流</p>
+<p>​                -write：向当前文档追加写入文本</p>
+<p>​                -writeIn：同上，但会换行</p>
+<p>​    <img src="https://p.ssl.qhimg.com/t016c684c2c50e6468a.gif" alt="img"></p>
 
             </div>
             <hr/>
@@ -498,7 +586,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/hello-world/">http://example.com/2020/11/22/hello-world/</a>
+                    <a href="http://example.com/2020/11/22/dom%E5%92%8Cbom/">http://example.com/2020/11/22/dom%E5%92%8Cbom/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -535,7 +623,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/%E5%89%8D%E7%AB%AF%E4%B8%89%E5%85%84%E5%BC%9F/">
+                                    <span class="chip bg-color">前端三兄弟</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -707,13 +799,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">
+                <a href="/2020/11/22/curl/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Chrome调试技巧">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="curl">
                         
-                        <span class="card-title">Chrome调试技巧</span>
+                        <span class="card-title">curl</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -749,16 +841,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/hello-world/">
+                <a href="/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Chrome调试技巧">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Chrome调试技巧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -779,7 +871,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
+                        <span class="chip bg-color">杂项</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
