@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="浮动与清除浮动, 啊！快进来学习">
+    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>浮动与清除浮动 | 啊！快进来学习</title>
+    <title>垂直居中总结 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">浮动与清除浮动</h1>
+                    <h1 class="description center-align post-title">垂直居中总结</h1>
                 </div>
             </div>
         </div>
@@ -473,28 +473,97 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="浮动与清除浮动"><a href="#浮动与清除浮动" class="headerlink" title="浮动与清除浮动"></a>浮动与清除浮动</h3><hr>
-<p>一：为什么要浮动：</p>
-<ul>
-<li>  让文字环绕图片</li>
+                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
+<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
+<li>水平居中：<ul>
+<li>先设置父容器为块级的。再其中设置text-align：center </li>
 </ul>
-<p>二：浮动会出现的问题：</p>
-<ul>
-<li>  父元素的高度是子元素撑开的，且子元素设置了浮动，父元素没有设置浮动。这样子元素脱离了标准的文档流，父元素的高度就会将其忽略。</li>
-<li>  如果不清除浮动，父元素就会因为子元素浮动引起高度为0的问题。</li>
+</li>
+<li>垂直居中：<ul>
+<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
+<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
+<li>同上父容器为块级。设置justify-content：center </li>
 </ul>
-<p>三：如何清除浮动：</p>
-<ul>
-<li>在末尾加一个空的div，向里面增加clear:both（如果页面浮动布局多，就要添加很多空div标签。）</li>
-<li>给父级div定义一个伪类：after和zoom。目前最常用的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;*采用此方法可以有效避免浏览器兼容问题*&#x2F;</span><br><span class="line"> .a:after&#123;</span><br><span class="line">  content:&#39;&#39;;</span><br><span class="line">  display:block;</span><br><span class="line">  height:0;</span><br><span class="line">  clear:both;</span><br><span class="line">  visibility:hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-对于zoom：设置或检索对象的缩放比例。注意：1：必须为需要清除浮动元素的伪对象中设置 height:0。2：只是用于ie6-7,因为他们不支持伪元素。</li>
-<li>  通过触发BFC方式，实现清除浮动。将父元素添加overflow：hidden或overflow：auto；</li>
+</li>
 </ul>
-<p>四：涉及到的属性：</p>
-<ul>
-<li>float：<ul>
-<li> 给元素添加浮动；</li>
-<li> none(默认) | left | right | inherit</li>
+<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
+<li>水平居中：<ul>
+<li>子块的宽度决定：<ul>
+<li>定宽：margin:0 auto;</li>
+<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
+</ul>
+</li>
+<li>使用定位元素：<ul>
+<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
+<li>（定宽）left：50%； margin-left:-width/2;</li>
+<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使用flex布局：<ul>
+<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>垂直居中：<ul>
+<li>使用定位元素：<ul>
+<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
+<li>（定宽）top：50%； margin-top/2;</li>
+<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使用flex布局：<ul>
+<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>水平垂直居中：<ul>
+<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
+<li>固定大小：  <ul>
+<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
+<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
+</ul>
+</li>
+<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
+</ul>
+</li>
+<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
+</ul>
+</li>
+</ul>
+<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
+<li>text-align：<ul>
+<li>规定元素中的文本的水平对齐方式</li>
+<li>center | left | right | justify（按照两端对齐） | inherit</li>
+</ul>
+</li>
+<li>vertical-align：<ul>
+<li>主要用来设置行内元素的垂直对齐方式。</li>
+<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
+</ul>
+</li>
+<li>top,left,bottom,right:<ul>
+<li>一定要有一个容器，在绝对定位中使用 </li>
+<li>设置离他最近的相对定位的容器的距离。</li>
+</ul>
+</li>
+<li>transform:translate:<ul>
+<li>向不同方向的轴移动。</li>
+</ul>
+</li>
+<li>line-height:<ul>
+<li>设置行间距。</li>
+<li>normal（默认）| number </li>
+</ul>
+</li>
+<li>position:<ul>
+<li>用来对元素进行定位</li>
+<li>static | relative | absolute | fixed | sticky | inherit</li>
 </ul>
 </li>
 </ul>
@@ -523,7 +592,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">http://example.com/2020/11/22/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/</a>
+                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -736,13 +805,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/flex%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="flex布局">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
                         
-                        <span class="card-title">flex布局</span>
+                        <span class="card-title">浮动与清除浮动</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -785,13 +854,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">
+                <a href="/2020/11/22/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="垂直居中总结">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
                         
-                        <span class="card-title">垂直居中总结</span>
+                        <span class="card-title">三栏布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

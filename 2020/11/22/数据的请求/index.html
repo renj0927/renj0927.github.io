@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="数据的请求, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>数据的请求 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">数据的请求</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/JS/">
+                                <span class="chip bg-color">JS</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
+                            <a href="/public/categories/JS/" class="post-category">
+                                JS
                             </a>
                         
                     </div>
@@ -473,99 +473,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
+                <h3 id="一：ajax"><a href="#一：ajax" class="headerlink" title="一：ajax"></a>一：ajax</h3><h5 id="1：XMLHttpRequest对象"><a href="#1：XMLHttpRequest对象" class="headerlink" title="1：XMLHttpRequest对象"></a>1：XMLHttpRequest对象</h5><ul>
+<li>作用：在不刷新页面的情况下，请求URL，获取数据。<h5 id="2：使用ajax的步骤"><a href="#2：使用ajax的步骤" class="headerlink" title="2：使用ajax的步骤"></a>2：使用ajax的步骤</h5></li>
+<li>创建XmlHttpRequest对象。</li>
+<li>调用open方法设置基本请求信息。</li>
+<li>设置发送的数据，发送请求。</li>
+<li>注册<strong>监听</strong>的回调函数</li>
+<li>拿到返回值，对页面进行更新</li>
 </ul>
-</li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
-</li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
-</li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
-</li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
-</li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
-</li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
-</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;1.创建Ajax对象</span><br><span class="line">    if(window.XMLHttpRequest)&#123;</span><br><span class="line">       var oAjax&#x3D;new XMLHttpRequest();</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">       var oAjax&#x3D;new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;2.连接服务器（打开和服务器的连接）</span><br><span class="line">    oAjax.open(&#39;GET&#39;, url, true);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;3.发送</span><br><span class="line">    oAjax.send();</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;4.接收</span><br><span class="line">    oAjax.onreadystatechange&#x3D;function ()&#123;</span><br><span class="line">       if(oAjax.readyState&#x3D;&#x3D;4)&#123;</span><br><span class="line">           if(oAjax.status&#x3D;&#x3D;200)&#123;</span><br><span class="line">              &#x2F;&#x2F;alert(&#39;成功了：&#39;+oAjax.responseText);</span><br><span class="line">              fnSucc(oAjax.responseText);</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">              &#x2F;&#x2F;alert(&#39;失败了&#39;);</span><br><span class="line">              if(fnFaild)&#123;</span><br><span class="line">                  fnFaild();</span><br><span class="line">              &#125;</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="二：fetch"><a href="#二：fetch" class="headerlink" title="二：fetch()"></a>二：fetch()</h3><h5 id="1：格式"><a href="#1：格式" class="headerlink" title="1：格式"></a>1：格式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fetch(url,options).then(function()&#123;&#125;).then(function()&#123;&#125;)</span><br><span class="line">&#x2F;&#x2F; options中可以携带任何的头部信息。</span><br><span class="line">&#x2F;&#x2F; fetch()是一个全局的方法。会返回一个promise。这个promise会在请求响应后被resolve，并传回response对象。</span><br></pre></td></tr></table></figure>
+<h5 id="2-fetch中的get和post请求的区别"><a href="#2-fetch中的get和post请求的区别" class="headerlink" title="2:fetch中的get和post请求的区别"></a>2:fetch中的get和post请求的区别</h5><ul>
+<li>get<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const url &#x3D; &#39;https:&#x2F;&#x2F;big-appliance.tv.mi.com&#x2F;query_bar_code?bar_code&#x3D;&#39;+e.data ;&#x2F;&#x2F;数据拼接要注意。</span><br><span class="line">      fetch(url,&#123;method:&#39;GET&#39;&#125;).then(res&#x3D;&gt;res.json())</span><br><span class="line">      .then((response)&#x3D;&gt;&#123;</span><br><span class="line">      &#125;)</span><br></pre></td></tr></table></figure></li>
+<li>post<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let url&#x3D;&#39;https:&#x2F;&#x2F;big-appliance.tv.mi.com&#x2F;api&#x2F;query_object&#39;;</span><br><span class="line">    let data&#x3D;&#123; &quot;image&quot;: uri, &quot;miid&quot;:Service.account.ID &#125;;</span><br><span class="line">    fetch(url,&#123;</span><br><span class="line">      method:&#39;POST&#39;,&#x2F;&#x2F; 这里就是fetch中可选的options。</span><br><span class="line">      body:JSON.stringify(data),</span><br><span class="line">    &#125;).then(res&#x3D;&gt;res.json())</span><br><span class="line">    .then((response) &#x3D;&gt; &#123;</span><br><span class="line">        &#125;))</span><br></pre></td></tr></table></figure></li>
+<li>options的选项还可以是<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    body: JSON.stringify(data), &#x2F;&#x2F; must match &#39;Content-Type&#39; header</span><br><span class="line">    cache: &#39;no-cache&#39;, &#x2F;&#x2F; *default, no-cache, reload, force-cache, only-if-cached</span><br><span class="line">    credentials: &#39;same-origin&#39;, &#x2F;&#x2F; include, same-origin, *omit</span><br><span class="line">    headers: &#123;</span><br><span class="line">      &#39;user-agent&#39;: &#39;Mozilla&#x2F;4.0 MDN Example&#39;,</span><br><span class="line">      &#39;content-type&#39;: &#39;application&#x2F;json&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    method: &#39;POST&#39;, &#x2F;&#x2F; *GET, POST, PUT, DELETE, etc.</span><br><span class="line">    mode: &#39;cors&#39;, &#x2F;&#x2F; no-cors, cors, *same-origin</span><br><span class="line">    redirect: &#39;follow&#39;, &#x2F;&#x2F; manual, *follow, error</span><br><span class="line">    referrer: &#39;no-referrer&#39;, &#x2F;&#x2F; *client, no-referrer</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch">具体的fetch的文档</a><h5 id="3：fetch和ajax的区别"><a href="#3：fetch和ajax的区别" class="headerlink" title="3：fetch和ajax的区别"></a>3：fetch和ajax的区别</h5></li>
+<li>fetch不会接受或者发送cookies</li>
+<li>fetch()返回的promise将不会拒绝http的错误状态，即使响应是一个HTTP 404或者500。<h3 id="三：WebSocket"><a href="#三：WebSocket" class="headerlink" title="三：WebSocket"></a>三：WebSocket</h3><h3 id="四："><a href="#四：" class="headerlink" title="四："></a>四：</h3></li>
 </ul>
 
             </div>
@@ -592,7 +517,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/">http://example.com/2020/11/22/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +555,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/JS/">
+                                    <span class="chip bg-color">JS</span>
                                 </a>
                             
                         </div>
@@ -801,17 +726,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/22/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据的请求">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">数据的请求</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -821,26 +747,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/JS/" class="post-category">
+                                    JS
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>
@@ -854,13 +781,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/flex%E5%B8%83%E5%B1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="flex布局">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">flex布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
