@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="浏览器兼容性问题, 啊！快进来学习">
+    <meta name="keywords" content="flex布局, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>浏览器兼容性问题 | 啊！快进来学习</title>
+    <title>flex布局 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">浏览器兼容性问题</h1>
+                    <h1 class="description center-align post-title">flex布局</h1>
                 </div>
             </div>
         </div>
@@ -432,14 +432,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                                <span class="chip bg-color">杂项</span>
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                CSS学习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -464,27 +473,63 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2><center>浏览器兼容性问题</center></h2>
-
-<hr>
-<h4><center>为什么会产生</center></h4>
-
-<hr>
-<p>&nbsp;&nbsp;主要就是因为不同的浏览器使用的内核都是不同的，（内核=渲染内核+js内核，他们就是用来解析我们写出来的页面的）就像是同样的一句话，被不同的人传出来，原本想表达的意思都会不一样。所以我们想要页面能够统一的表达出来，就必须考虑到兼容性问题。</p>
-<h3><center>pc端</center></h3>
-
-<hr>
-<h5>html:</h5>
-
+                <h3 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h3><hr>
+<p>一：是什么</p>
 <ul>
-<li>h5新标签在IE9以下识别问题：<br>what:html5的标签太新了，IE9以下的浏览器不支持。<br>A：1：IE8/IE7/IE6支持通过document.createElement方法产生的标签<pre><code class="var">var i= e.length;
-while (i--)&#123;
-  document.createElement(e[i])
-&#125;```
-</code></pre>
+<li>是“flexible box”的缩写。是指弹性盒子。所有容器都可以设置。<ul>
+<li>父容器设置flex后，子容器的float，clear，vertical-align都会失效。</li>
+</ul>
+</li>
+<li>设置display：flex的叫做flex容器。容器中的叫做flex项目。对于项目，有两个方向，水平的主轴，垂直的交叉轴。</li>
+</ul>
+<p>二：容器的属性</p>
+<ul>
+<li>flex-direction    <ul>
+<li>控制项目在主轴的排列方向。</li>
+<li>row(横向) | row-reverse | column（纵向） | column-reverse</li>
+</ul>
+</li>
+<li>flex-wrep<ul>
+<li>控制如果项目多了需不需要换行</li>
+<li>nowrap(不换行) | wrep(换行) | wrep-reverse(反向换行)</li>
+</ul>
+</li>
+<li>flex-flow<ul>
+<li>上俩个属性的集合写法。 flex-direction  || flex-wrep</li>
+</ul>
+</li>
+<li>justify-content<ul>
+<li>定义主轴上的排列方式</li>
+<li>flex-start | flex-end | center | space-between | space-aroud.(between和aroud都是展开排列，不同的是，between顶头拉伸的，aroud是从中间均匀拉伸。)</li>
+</ul>
+</li>
+<li>align-items<ul>
+<li>定义纵轴上的排列方式</li>
+<li>flex-start | flex-end | center | strech | baseline</li>
+</ul>
+</li>
+<li>align-content<ul>
+<li>定义多根轴上的定义方式。 </li>
+</ul>
 </li>
 </ul>
-<p>1：浏览器标签默认的内外补丁不同<br>what:浏览器对html中能使用的标签的解析定义不同。<br>遇见度：100%<br>解决：在css中，设置*{margin:0,padding:0} 或者设置 所有标签{}同前</p>
+<p>三：项目的属性</p>
+<ul>
+<li>order<ul>
+<li>定义项目的排列顺序，数值越小越靠前。</li>
+</ul>
+</li>
+<li>flex<ul>
+<li>是 flex-grow(放大比例) | flex-shrink(缩小比例) | flex-basis的集合写法。他们的默认值分别是 0 1 auto。他们均匀分配空间。</li>
+<li>Q:flex:1代表着什么。    a: flex:1 == flex:1 1 auto</li>
+</ul>
+</li>
+<li>align-self<ul>
+<li>允许单个项目有与其他项目不同的对齐方式。会覆盖alige-items。</li>
+<li>auto | flex-start | flex-end | center | baseline | stretch;</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -510,7 +555,7 @@ while (i--)&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/">http://example.com/2020/11/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</a>
+                    <a href="http://example.com/2020/11/22/flex%E5%B8%83%E5%B1%80/">http://example.com/2020/11/22/flex%E5%B8%83%E5%B1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,8 +593,8 @@ while (i--)&#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                                    <span class="chip bg-color">杂项</span>
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
                                 </a>
                             
                         </div>
@@ -719,17 +764,18 @@ while (i--)&#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/11/22/CSS%E5%9F%BA%E7%A1%80/">
+                <a href="/2020/11/22/flex%E5%B8%83%E5%B1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="CSS大字典">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="flex布局">
                         
-                        <span class="card-title">CSS大字典</span>
+                        <span class="card-title">flex布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -739,17 +785,22 @@ while (i--)&#123;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-22
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    CSS学习
+                                </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -768,13 +819,13 @@ while (i--)&#123;
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/HTTP%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">
+                <a href="/2020/11/22/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="HTTP思维导图">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
                         
-                        <span class="card-title">HTTP思维导图</span>
+                        <span class="card-title">浮动与清除浮动</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -798,8 +849,8 @@ while (i--)&#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                        <span class="chip bg-color">杂项</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>

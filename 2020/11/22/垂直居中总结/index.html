@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="浏览器兼容性问题, 啊！快进来学习">
+    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>浏览器兼容性问题 | 啊！快进来学习</title>
+    <title>垂直居中总结 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">浏览器兼容性问题</h1>
+                    <h1 class="description center-align post-title">垂直居中总结</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                                <span class="chip bg-color">杂项</span>
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
                             </a>
                         
                     </div>
@@ -464,27 +464,100 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2><center>浏览器兼容性问题</center></h2>
-
-<hr>
-<h4><center>为什么会产生</center></h4>
-
-<hr>
-<p>&nbsp;&nbsp;主要就是因为不同的浏览器使用的内核都是不同的，（内核=渲染内核+js内核，他们就是用来解析我们写出来的页面的）就像是同样的一句话，被不同的人传出来，原本想表达的意思都会不一样。所以我们想要页面能够统一的表达出来，就必须考虑到兼容性问题。</p>
-<h3><center>pc端</center></h3>
-
-<hr>
-<h5>html:</h5>
-
-<ul>
-<li>h5新标签在IE9以下识别问题：<br>what:html5的标签太新了，IE9以下的浏览器不支持。<br>A：1：IE8/IE7/IE6支持通过document.createElement方法产生的标签<pre><code class="var">var i= e.length;
-while (i--)&#123;
-  document.createElement(e[i])
-&#125;```
-</code></pre>
+                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
+<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
+<li>水平居中：<ul>
+<li>先设置父容器为块级的。再其中设置text-align：center </li>
+</ul>
+</li>
+<li>垂直居中：<ul>
+<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
+<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
+<li>同上父容器为块级。设置justify-content：center </li>
+</ul>
 </li>
 </ul>
-<p>1：浏览器标签默认的内外补丁不同<br>what:浏览器对html中能使用的标签的解析定义不同。<br>遇见度：100%<br>解决：在css中，设置*{margin:0,padding:0} 或者设置 所有标签{}同前</p>
+<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
+<li>水平居中：<ul>
+<li>子块的宽度决定：<ul>
+<li>定宽：margin:0 auto;</li>
+<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
+</ul>
+</li>
+<li>使用定位元素：<ul>
+<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
+<li>（定宽）left：50%； margin-left:-width/2;</li>
+<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使用flex布局：<ul>
+<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>垂直居中：<ul>
+<li>使用定位元素：<ul>
+<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
+<li>（定宽）top：50%； margin-top/2;</li>
+<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使用flex布局：<ul>
+<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>水平垂直居中：<ul>
+<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
+<li>固定大小：  <ul>
+<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
+<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
+</ul>
+</li>
+<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
+</ul>
+</li>
+<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
+</ul>
+</li>
+</ul>
+<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
+<li>text-align：<ul>
+<li>规定元素中的文本的水平对齐方式</li>
+<li>center | left | right | justify（按照两端对齐） | inherit</li>
+</ul>
+</li>
+<li>vertical-align：<ul>
+<li>主要用来设置行内元素的垂直对齐方式。</li>
+<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
+</ul>
+</li>
+<li>top,left,bottom,right:<ul>
+<li>一定要有一个容器，在绝对定位中使用 </li>
+<li>设置离他最近的相对定位的容器的距离。</li>
+</ul>
+</li>
+<li>transform:translate:<ul>
+<li>向不同方向的轴移动。</li>
+</ul>
+</li>
+<li>line-height:<ul>
+<li>设置行间距。</li>
+<li>normal（默认）| number </li>
+</ul>
+</li>
+<li>position:<ul>
+<li>用来对元素进行定位</li>
+<li>static | relative | absolute | fixed | sticky | inherit</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -510,7 +583,7 @@ while (i--)&#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/">http://example.com/2020/11/22/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</a>
+                    <a href="http://example.com/2020/11/22/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -548,8 +621,8 @@ while (i--)&#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                                    <span class="chip bg-color">杂项</span>
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
                                 </a>
                             
                         </div>
@@ -723,13 +796,13 @@ while (i--)&#123;
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/11/22/CSS%E5%9F%BA%E7%A1%80/">
+                <a href="/2020/11/22/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="CSS大字典">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
                         
-                        <span class="card-title">CSS大字典</span>
+                        <span class="card-title">浮动与清除浮动</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -768,13 +841,13 @@ while (i--)&#123;
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/HTTP%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">
+                <a href="/2020/11/22/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="HTTP思维导图">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
                         
-                        <span class="card-title">HTTP思维导图</span>
+                        <span class="card-title">三栏布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -798,8 +871,8 @@ while (i--)&#123;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9D%82%E9%A1%B9/">
-                        <span class="chip bg-color">杂项</span>
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>
