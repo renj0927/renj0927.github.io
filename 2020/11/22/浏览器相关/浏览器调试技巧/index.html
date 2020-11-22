@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="Chrome调试技巧, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>Chrome调试技巧 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">Chrome调试技巧</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/%E6%9D%82%E9%A1%B9/">
+                                <span class="chip bg-color">杂项</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
+                            <a href="/public/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="post-category">
+                                浏览器
                             </a>
                         
                     </div>
@@ -473,100 +473,29 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
-</li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
-</li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
-</li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
-</li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
-</li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
-</li>
-</ul>
+                <h2><center>Chrome调试技巧</center></h2>
+
+<hr>
+<h5>element部分：</h5>
+​    1：(基础操作。针对mac)command+option+i 快捷键打开。三点调控制台位置。有可以快速切换pc和手机端的按钮，edit可以自定义设备。
+
+<p>​    2：控制台中 elements（元素）可以用来控制整体的布局，右键的一些功能可以直接从控制台写html。</p>
+<p>​    3：dom加断点，元素状态改变的监控方法。break on里的subtree。可以知道这个dom元素是如何通过js改变的。</p>
+<p>​    4:可以通过在一个区域右键-检查来快速找到相应的样式，并修改。</p>
+<p>​    5:elements可以直接通过相应的盒子，来改变盒模型大小。从页面是直观的调整页面。computed来查看当前盒子上所有的css样式。(盒子也在里面)</p>
+<p>​    6：可以通过eventlistener来快速查找有事件的dom节点在哪里。（比如用于一些有动画状态的页面）</p>
+<h5>other：</h5>
+
+<p>​    1：console-控制台。可以用来显示一些调试的信息.可以用来简单检查一段js代码有没有错误。控制台日志可保存。</p>
+<p>​    2：本地文件使用source中的filesystem放文件，这样在style中该样式了，文件也会自动更新。如果是线上文件则是在network文件夹中修改。(打断点，在哪里打断点是一个技术)</p>
+<p>​    3：network用来抓包，看网络性能。和文件加载过程。（网络请求面板）disable cache 勾选后，所有的资源不会使用cache中已经下载好的，而是全部重新下载。（一般就是用他来看写页面的时候取得接口，然后看数据返回没有。主要还是看XHR。XMLHttpRequst对象，向服务器发送请求）</p>
+<p>​    4：页面重绘，三小点-more tools-rendering。</p>
+<p>​    5：more tools中的coverage可以筛选出没有被使用到的代码，红色部分就是没有被用到的，通过这个可以做出一些页面的优化。</p>
+<p>​    6：页面动画调试监控。animations来调节动画效果。</p>
+<p>​    7：network 可以调节不同网络下的页面显示状况，还可以通过user agent来在不同设备下显示页面的状况。</p>
+<p>​    8：request block 让浏览器阻止一些请求资源，可以用来阻止广告。。。</p>
+<p>​    9：search用来查找全局的资源。</p>
+<p>​    10：后端要查数据所需要的curl可以在接口处右键copy中取得，把这个发个后端，后端就可以查看接口是否有数据，是否能用。 </p>
 
             </div>
             <hr/>
@@ -592,7 +521,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">http://example.com/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +559,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/%E6%9D%82%E9%A1%B9/">
+                                    <span class="chip bg-color">杂项</span>
                                 </a>
                             
                         </div>
@@ -805,13 +734,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/js/dom%E5%92%8Cbom/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="DOM和BOM">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">DOM和BOM</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -828,8 +757,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/JS/" class="post-category">
+                                    JS
                                 </a>
                             
                             
@@ -839,8 +768,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/js/">
+                        <span class="chip bg-color">js</span>
                     </a>
                     
                 </div>
@@ -851,16 +780,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9B%B8%E5%85%B3/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Chrome调试技巧">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">Chrome调试技巧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -877,19 +806,20 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="post-category">
+                                    浏览器
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/%E6%9D%82%E9%A1%B9/">
+                        <span class="chip bg-color">杂项</span>
                     </a>
                     
                 </div>

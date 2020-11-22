@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="linux命令, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>linux命令 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">linux命令</h1>
                 </div>
             </div>
         </div>
@@ -432,23 +432,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -473,100 +464,101 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
-</li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
-</li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
+                <h2><center>linux命令</center></h2>
+
+<hr>
+<ul>
+<li>cd 去到之前的目录(使用tab可以补全输入命令)<ul>
+<li>.   当前目录 </li>
+<li>..   退去上级目录 </li>
+<li>~  主目录  </li>
+<li>绝对路径（有/）与相对路径：相对是相对当前目录来说的。 去往不同的路径时使用绝对。</li>
 </ul>
 </li>
 </ul>
+<ul>
+<li><p>pwd - 查看用户的当前目录</p>
 </li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
+<li><p>ls 显示当前目录信息(只显示普通文件)  </p>
+<ul>
+<li>-stat 显示文件详细信息  </li>
+<li>-ah 查看隐藏目录</li>
+<li>-a 可显示隐藏文件，.开头的文件</li>
+<li>-l：使用长格式列出文件，所有文件详情都列出</li>
+<li>-la ~:使用长格式列出所有的文件，包括隐藏文件。</li>
+<li>-r：文件以相反的次序显示</li>
+<li>-t：根据最后修改时间改变</li>
+<li>-ltr s*：列出所有开头是s的文件</li>
 </ul>
 </li>
+<li><p>mkdir[参数]-[目录]-在当前目录下，创建一个空目录</p>
+<ul>
+<li>-p：创建多级目录</li>
+<li>-v：显示目录的常见过程</li>
 </ul>
 </li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
+<li><p>rmdir-删除当前目录</p>
+</li>
+<li><p>touch-创建一个任意格式的文件 记得加后缀</p>
+</li>
+<li><p>cp-复制文件。cp[参数]-[文件]（还有很多的option）</p>
+<ul>
+<li>-f [文件]-[文件重命名]：复制直接覆盖原文件</li>
+<li>-i：会询问是否覆盖</li>
+<li>-v：显示cp的执行过程</li>
+<li>-R：复制目录</li>
+<li>-r：一次复制多个文件</li>
 </ul>
 </li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
+<li><p>mv 文件+移去目录：移动文件 </p>
+<ul>
+<li>-i：存在同名文件，则会询问是否覆盖</li>
 </ul>
 </li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
+<li><p>cat-查看文本文件的内容</p>
+<ul>
+<li>\n：加行号显示</li>
+</ul>
+</li>
+<li><p>more：查看内容长的文本</p>
+</li>
+<li><p>echo 文件重定向，有则打开，无则创建</p>
+</li>
+<li><p>gzip,bzip2,tar -czvf,-文件压缩命令</p>
+</li>
+<li><p>gzip -d,bzip2 -d,tar -xzvf,-解压命令</p>
+</li>
+<li><p>man  显示命令的使用 q用来退出</p>
+</li>
+<li><p>clear 清空屏幕</p>
+</li>
+<li><p>*kill-杀死进程， 用ps（静态进程快照）top（动态进程）查找进程，然后kill+pid    sudo lsof -i :端口 -查找响应的端口号(kill也要加sudo)(就我个人而言，蛮常用的)</p>
+</li>
+<li><p>alias 对命令重命名 别名=指令名(使用这个查看git的一些缩写简写命令)</p>
+</li>
+<li><p>ssh[参数]-[主机]：登录远程服务器。给予ssh加密协议实现安全的远程登录服务器，实现对服务器的管理</p>
+<ul>
+<li><p>1/2：强制使用 ssh 协议版本 1/2</p>
+</li>
+<li><p>4/6：强制使用 ipv4/6 地址</p>
+</li>
+<li><p>f：后台执行ssh指令</p>
+</li>
+<li><p>l&lt;登录名&gt;：指定连接远程服务器的登录用户名</p>
+</li>
+<li><p>p&lt;端口&gt;：指定远程服务器上的端口</p>
+</li>
 </ul>
 </li>
 </ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
+<ul>
+<li>vim  终端打开文件。vi+文件名-进入文件 按s进入insert开始修改，修改完成后按一下esc调出vi命令，输入:wq保存并退出vi模式。</li>
+<li>open 是在外部打开文件。</li>
 </ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
-</li>
-</ul>
+<p>注：shell:是一个用shell编写的脚本程序。有许多种类：bash，dash，zsh等</p>
+<p>​      bash：（默认）有很灵活和强大的编程接口，同时又有很友好的用户界面。功能包括命令补齐、通配符、命令历史记录、别名等。</p>
+<p>​      dash：bash的弟弟，功能没有bash多。</p>
+<p>​      zsh：最新的，所有shell的集合+增加功能。改进的shell选项处理、shell兼容性模式以及可加载模块。</p>
 
             </div>
             <hr/>
@@ -592,7 +584,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/other/linux%E6%8C%87%E4%BB%A4/">http://example.com/2020/11/22/other/linux%E6%8C%87%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +622,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -805,13 +797,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/other/md%E7%9A%84%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="md常用语法总结">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">md常用语法总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -826,11 +818,7 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
-                                </a>
+                            <i class="fas fa-user fa-fw"></i>
                             
                             
                         </span>
@@ -839,8 +827,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/%E6%9D%82%E9%A1%B9/">
+                        <span class="chip bg-color">杂项</span>
                     </a>
                     
                 </div>
@@ -854,13 +842,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/other/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="项目中的记录和感想">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">项目中的记录和感想</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -875,11 +863,7 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
-                                </a>
+                            <i class="fas fa-user fa-fw"></i>
                             
                             
                         </span>
@@ -888,8 +872,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/%E6%84%9F%E6%83%B3/">
+                        <span class="chip bg-color">感想</span>
                     </a>
                     
                 </div>

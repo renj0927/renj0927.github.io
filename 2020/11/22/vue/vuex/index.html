@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="vuex的简单学习, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>vuex的简单学习 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">vuex的简单学习</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
+                            <a href="/public/categories/VUE/" class="post-category">
+                                VUE
                             </a>
                         
                     </div>
@@ -473,99 +473,46 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
+                <h2><center>为什么会有vuex<center></h2>
+
+<hr>
+<p>&nbsp;&nbsp;还记得组件间的传值吗？如果不记得了，回去这里看看哦。<a href="">vue的组件传值</a>。兄弟组件之间的传值不是很方便，就算是父子之间，如果项目变大，组件变多了，这样的传值就会非常的混乱，自己也会被绕进去。这时候有一个状态管理就非常的好了。所以vuex就出来啦！</p>
+<h2><center>vuex的使用</center></h2>
+
+<hr>
+<ul>
+<li>安装：<ul>
+<li>使用npm install vuex -save // yarn add vuex</li>
+<li>使用vue-cli3来直接创建有vuex的项目</li>
 </ul>
 </li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
+<li>使用：<br>  1：在vue3项目中。在store文件夹下添加一个index.js文件(用来做状态管理的)<br>  2：在文件中写入import vuex form ‘vuex’ 和 import vue from ‘vue’<br>  3:同文件下  vue.use(vuex);<code>export default new Vuex.store(&#123;modules:&#123; 里面放入需要使用vuex中数据的模块。&#125;&#125;)</code><br>  4：将store文件下的index.js在主目录下的main.js中引用。import store from ‘yourpath’  在new vue({store,})(将这个store作为一个全局的仓库)<br>  5：在组件中使用这个值，就在<code>&#123;&#123;$store.state.num&#125;&#125; </code>或 在compute中写一个函数，然后return this.$store.state.num（写在computed会好一些）<br>注：使用一个变量export一个，不然的话页面会渲染错误。<h2><center>5个部分</center></h2>
+
 </li>
 </ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
-</li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
+<hr>
+<ul>
+<li>state:相当于组件的数据，用来存放全局的数据。state是一个对象。这里的对象里的值，就被vue中的computed属性返回。（计算属性中写一个函数，然后返回vuex中的值，这样就可以直接使用。计算属性是一个属性，调用时就按照属性调用。）this.$store.state.data改变时，当都会重新求取计算属性，并且触发更新相关联的DOM。<figure class="highlight plain"><figcaption><span>&#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  count () &#123;</span><br><span class="line">    return this.$store.state.count</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>getters:相当于组件中的computed，getters是全局的，computed是各自组件中的。组件中统一使用的数据，就可以放在getters中。<br>store的getters中：<code>getNum(state)&#123;return state.num &#125;</code><br>组件中：<code>&#123;&#123;$store.getters.getNum&#125;&#125;</code></li>
+<li>actions:做异步方法（在点击之后可能需要请求参数时使用），实际修改状态值的还是mutations。所以事件是写在mutations中，在actions中调用<br>store的mutations：<code>decrease(state)&#123;state.num--;&#125; &#125;</code><br>store的actions中：<code>decreaseAsync(context)&#123;context.commit(&#39;decrease&#39;)&#125;</code><br>组件中：<code>&#123;&#123;$store.dispatch('decreaseAsync')&#125;&#125;</code><br>注：mutations中也要记得写。</li>
+<li>mutations:相当于是组件中的methods,但是不能使用异步方法（定时器，axios）=&gt;同步。更改store中状态的唯一方法。<br>store的mutations中：<code>add(state,payload)&#123;state.num++&#125;</code><br>组件中：<code>methods:&#123;addFn()&#123;this.$store.commit(&#39;add&#39;,加参)&#125;&#125;</code><br>注：payload是一个形参，如果组件在commit时，有传这个参数过来，就存在，如果没有传就是undefined。（可以通过传过来的payload来改变state中的值）</li>
+<li>modules:<ul>
+<li>namespaced：命名空间。可以使模块有更高的封装度和复用性，</li>
 </ul>
 </li>
 </ul>
+<p>注：使用那一部分，就引用哪一个变量，不然就会报错。</p>
+<h2><center>map*</center></h2>
+
+<hr>
+<ul>
+<li>可以使用<code>import &#123; mapState &#125; from &#39;vuex&#39;</code>将vuex映射过来<blockquote>
+<p>computed中，写入…mapState([‘num’]),这样在模板中，就可以直接用<br>注：同理可以引入mapGetters，mapMutations，mapActions，其他写法同上。</p>
+</blockquote>
 </li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
-</li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
-</li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
-</li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
-</li>
+<li>mapState,mapGetters都写在computed中。</li>
+<li>mapMutations，mapActions都写在methods中。</li>
+<li>mapState辅助函数：就是将一个大的index拆分成5个分开的.js文件。</li>
 </ul>
 
             </div>
@@ -592,7 +539,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/vue/vuex/">http://example.com/2020/11/22/vue/vuex/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +577,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -805,13 +752,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">三栏布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -854,13 +801,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/vue/keep-alive/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="保存当前页面状态的方法">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">保存当前页面状态的方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -877,8 +824,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/VUE/" class="post-category">
+                                    VUE
                                 </a>
                             
                             
@@ -888,8 +835,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>

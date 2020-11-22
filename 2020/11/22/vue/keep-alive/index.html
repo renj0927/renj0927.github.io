@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="保存当前页面状态的方法, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>保存当前页面状态的方法 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">保存当前页面状态的方法</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
+                            <a href="/public/categories/VUE/" class="post-category">
+                                VUE
                             </a>
                         
                     </div>
@@ -473,100 +473,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
+                <h2>保存当前页面状态的方法</h2>
+
+<hr>
+<p>1：<keep-alive>:<br>作用：保持页面现在的状态，跳出去后，回来还是这个状态。应用于单个组件比较好。<br>踩坑：做的单页面，想要在跳出页面后回来还是这个状态，所以想到了对整个页面使用keep-alive。虽然，状态是保持住了，但是移动端的头部（返回按键啥的都没了），所以以后keep-alive还是只能使用在某一个组件部分比较好。<br>用法：<keep-alive> 可以在里面加v-if来判断哪个是他想要包活的路由页面是哪个。在router上也要加。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> &lt;keep-alive&gt;</span><br><span class="line">    &lt;router-view v-if&#x3D;&quot;$route.meta.keepAlive&quot;&gt;&lt;&#x2F;router-view&gt;</span><br><span class="line">&lt;&#x2F;keep-alive&gt;</span><br><span class="line">    &lt;router-view v-if&#x3D;&quot;!$route.meta.keepAlive&quot;&gt;&lt;&#x2F;router-view&gt;</span><br><span class="line">组件中：name:&quot;name&quot; &#x2F;&#x2F;如果使用了keep-alive缓存该组件状态，则此组件必须有这个属性。</span><br><span class="line">router上：</span><br><span class="line"> meta:&#123;</span><br><span class="line">        requireAuth : true,</span><br><span class="line">        keepAlive: true,        </span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2：vuex<br>作用：通过vuex来存储需要保持的数据。然后取数据也是从store中取，所以只要不改变store中的值，就能保持状态。然后就通过vuex传值。<br>使用：</p>
+<ul>
+<li>在store中的创建的modules文件下添加一个.js文件。其中按照vuex的属性来写。对于初始化vuex，一般写在一个index.js中。</li>
 </ul>
-</li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
-</li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
-</li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
-</li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
-</li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
-</li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
-</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import mycoin from &#39;.&#x2F;modules&#x2F;mycoin&#39;</span><br><span class="line">Vue.use(Vuex)</span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">  modules: &#123;</span><br><span class="line">    mycoin,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;) &#x2F;&#x2F;注意在总的main.js中要引入vuex；</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
             </div>
             <hr/>
@@ -592,7 +509,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/vue/keep-alive/">http://example.com/2020/11/22/vue/keep-alive/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +547,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -805,13 +722,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/vue/vuex/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="vuex的简单学习">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">vuex的简单学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -828,8 +745,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/VUE/" class="post-category">
+                                    VUE
                                 </a>
                             
                             
@@ -839,8 +756,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
@@ -854,13 +771,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/vue/vue%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="vue">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">vue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -877,8 +794,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/VUE/" class="post-category">
+                                    VUE
                                 </a>
                             
                             
@@ -888,8 +805,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>

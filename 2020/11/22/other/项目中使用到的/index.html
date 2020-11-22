@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="项目中的记录和感想, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>项目中的记录和感想 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">项目中的记录和感想</h1>
                 </div>
             </div>
         </div>
@@ -432,23 +432,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/%E6%84%9F%E6%83%B3/">
+                                <span class="chip bg-color">感想</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -473,100 +464,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
-</li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
-</li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
-</li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
-</li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
-</li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
-</li>
-</ul>
+                <p>-confirm(message) 方法用于显示一个带有指定消息和 OK 及取消按钮的对话框。参数是要在对话框中显示的纯文本。   返回值是boolean。确定-true，取消-false</p>
+<p>-this.getQueryParams()：获取数据</p>
+<p>-h5项目</p>
+<p>-vant：适合使用在移动端的轻量级ui库。需要翻墙。</p>
+<p>-jsapi：组装好的可以直接调用的接口，适用于ios和安卓</p>
+<p>-nummt：数字格式化命令，用于数字值的后面，将数字值标准化。</p>
+<p>-数据中的值的变换，是根据上面的tab条切换的，切换到不同的取值不同-&gt;现在问题，如何取值。使用封装好的api.post方法调用接口。（这个方法是根据axios封装的）api.post(“接口名”，参数:参数值)=&gt;这个是想要向后端接口传递一个参数，然后通过传过去的参数的不同，后端给前端返回相应参数下的数据。=&gt;再具体的方法可以看axios的官方文档。fetch是一个api，使用了promise  语法，fetch（参数）.then(完成的回调函数).catch(失败的回调函数)</p>
+<p>fetch（url，opts）.then((reponce)=&gt;{})</p>
+<p>![image-20200812161512541](/Users/lilyren/Library/Application Support/typora-user-images/image-20200812161512541.png)</p>
+<p>fetch从网络接口中请求数据，.then处理请求得到的数据 .catch处理请求失败后的回调</p>
+<p>-一个好习惯，写一个单页面，最好不要在别人的基础上改，而是要自己写在文件夹中，然后通过import引入，这样不会污染别人的代码，自己犯错也容易修改。</p>
+<p>页面要学会拆分成不同的组件，这样每一个部件也好拆分和重用。</p>
+<p>-父子组件传值：</p>
+<p>子-&gt;父：(@)1：  父组件中在相应的子组件中添加监听事件@子组件传来的值=“相应函数”  这样父组件就可以使用子组件传来的值。（相应函数就是在watch中写入“相应函数”，用来监听传过来的参数是否变化）2：子中的数据，触发原生事件，父组件定义的函数，在子中使用this.$emit(‘父组件指定的传数据绑定的函数’，this.childvalue-想要子组件给父组件传递的值) 来触发自定义的childhandle</p>
+<p>父-&gt;子：(:)1：引入子组件。2：在父中添加子组件。3：父组件绑定自定义的属性（：自定义属性（父中的）=‘父中的数据’）爸爸要知道给儿子的东西是从哪里来的，所以命名和数据都要是自己定义的。4：子组件通过props接受父组件的传值。就可以在子组件中使用</p>
+<p>-this.api.post:是基于axios.post封装的一个post请求 post（url，data）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">postform</span>(<span class="params">url,data = &#123;&#125;</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">    instance.post(url,data)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">      resolve(response.data);</span><br><span class="line">    &#125;,<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">      reject(err)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>-watch：用来监听单个属性   watch:{selected:function(newV,oldV)}  上面导航的值可以用watch来监听，然后，可以，使用this.$router.push({name:’’})….oldV就是在newV之前的一个值  ，也可以使用this.属性名来 this.selected   this.$router.push({name:’this.selected’})</p>
+<p>-axios:  import Axios from “./axios”   vue.prototype.$axios=Axios</p>
+<p> Axios.defults.baseURL=”url”   用来写调用的接口之前的路径，之后，就可以直接使用axios来调取接口</p>
+<p>发起请求是在created中发起，就是取数据的时候是放在这里的，</p>
 
             </div>
             <hr/>
@@ -592,7 +511,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/other/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84/">http://example.com/2020/11/22/other/%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +549,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/%E6%84%9F%E6%83%B3/">
+                                    <span class="chip bg-color">感想</span>
                                 </a>
                             
                         </div>
@@ -805,13 +724,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/other/linux%E6%8C%87%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="linux命令">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">linux命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -826,11 +745,7 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
-                                </a>
+                            <i class="fas fa-user fa-fw"></i>
                             
                             
                         </span>
@@ -839,8 +754,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>
@@ -854,13 +769,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/css/CSS%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="CSS大字典">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">CSS大字典</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

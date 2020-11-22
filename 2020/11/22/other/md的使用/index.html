@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="md常用语法总结, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>md常用语法总结 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">md常用语法总结</h1>
                 </div>
             </div>
         </div>
@@ -432,23 +432,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/%E6%9D%82%E9%A1%B9/">
+                                <span class="chip bg-color">杂项</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -473,100 +464,106 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
-</ul>
+                <h2><center>md是什么</center></h2>
+
+<hr>
+<p>&nbsp;&nbsp;md是一种Markdown文件使用的编写语言，轻量级，学习成本中等，但是熟练使用之后会胜过一切文档书写工具。而且md支持书写html和css书写，可以更方便对文章内容的控制。所以，md和博客在一起更配哦~</p>
+<p>##<center>使用频度高的</center></p>
+<hr>
+<p>#####标题类：</p>
+<ul>
+<li><p>标题大小 : 使用# – 从1个到6个，表示标题的大小。</p>
+<blockquote>
+<p>ex : ###三级标题 =&gt; 等价于html中的&lt;h3&gt;标题。</p>
+</blockquote>
 </li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
+<li><p>标题下的分割线：使3个及以上的- , _ , * , 都是可以的。</p>
 </li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
+<li><p>标题居中：把标题框在&lt;center&gt;中</p>
 </li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
+<li><p>标题改颜色,大小：给标题添加&lt;font color=’’ size=’’&gt;</p>
 </li>
 </ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
+<p>#####文本类：</p>
+<ul>
+<li>加入一个列表： <ul>
+<li>无序列表：+ ，*，- 都可以用来表示无序列表。3个都是一个圆点，可以嵌套使用。</li>
+<li>有序列表：1：2：等数字可以用来表示有序列表。</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
+<p><strong><em>！</em></strong> 一定符号后加一个空格，小圆点才能出来。</p>
+<ul>
+<li><p>加链接：[名字]（url）: 可以建立连接，无论是去别的网站，或是跳去自己别的文章都是可以的。（url的路劲每个人都是不一样的哦）</p>
+<ul>
+<li>跳转去内部连接</li>
+<li>跳转去外部连接,可以使用连接，也可以使用&lt;a&gt;标签 这样可以给标签添加一个_blank。<blockquote>
+<p>ex1 : [去看看git](](../git/git基础操作.md) <a href="../git/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C.md">去看看git</a><br>ex2 : &lt;a href=’<a target="_blank" rel="noopener" href="http://www.baidu.com&/#39;">http://www.baidu.com&#39;</a> target=’_blank’ &gt;百度&lt;/a&gt;   <a href='http://www.baidu.com' target='_blank' >百度</a></p>
+</blockquote>
 </li>
 </ul>
 </li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
+<li><p>加入代码：使用点 `（esc下面的那个）来把代码块框起来。少代码1个，多代码3个。</p>
+<blockquote>
+<p>ex : `var a = 0; `  =&gt;  <code>var a = 0;</code></p>
+</blockquote>
 </li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
+<li><p>加入图片：![图片名]  (url) 表示一个图片</p>
 </li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
+<li><p>字体加重：使用* , _ , 加重字体。1~3个，加重的情感不同。（还是有点不一样的对吧）</p>
+<blockquote>
+<p>ex : *加重* =&gt; <em>加重</em><br>ex : **加重** =&gt; <strong>加重</strong><br>ex : ***加重*** =&gt; <strong><em>加重</em></strong></p>
+</blockquote>
 </li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
+<li><p>文字下划线：使用&lt;u&gt;添加下划线。</p>
+<blockquote>
+<p>ex : &lt;u&gt;加下划线&lt;/u&gt; =&gt; <u>加下划线</u></p>
+</blockquote>
 </li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
+<li><p>引用或加例子：使用&gt;来表示一个区块，可以多个连用。依次递增表示嵌套。</p>
 </li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
+<li><p>加上空格：md不支持直接空格，可使用&amp;nbsp;一个就是一个空格。</p>
 </li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
+<li><p>加上转移字符：md中使用了很多的符号，只想让符号显示怎么办？在符号前加上\（转义字符）就好啦。</p>
 </li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
+<li><p>删除线：使用~~将想要删除的内容框起来</p>
+<blockquote>
+<p>ex : ~~ 删除 ~~  =&gt; <del>删除</del></p>
+</blockquote>
 </li>
 </ul>
+<p>##<center>使用频度低的</center></p>
+<hr>
+<p>#####公式类：（以后用到了再总结哈）<br>#####表格类：</p>
+<p>##<center>Typora的快捷键</center></p>
+<hr>
+<p>#####关于Typora：<br>&nbsp;&nbsp;最开始时我觉得md语法不方便，就是使用Typora来写的。(主要是懒得记那些指令)优点是方便，界面干净，还有很多快捷键，只需要去记住快捷键就行。缺点就是，因为写起来太过流畅，会不注意很多的书写细节(主要是符号方面的)这样在启动hexo项目的时候就会出现渲染上的错误。<br>#####快捷键：</p>
+<ul>
+<li><p>cmd+b 加粗</p>
+</li>
+<li><p>cmd+i 斜体</p>
+</li>
+<li><p>cmd+u 下划线</p>
+</li>
+<li><p>cmd+k 超链接</p>
+</li>
+<li><p>cmd+数字  标题级数</p>
+</li>
+<li><p>crl+` 代码块</p>
+</li>
+<li><p>crl+- 和html一样的注释</p>
+</li>
+</ul>
+<hr>
+<center>--未完待续--</center>
+
+
+
+
+
+
+
+
 
             </div>
             <hr/>
@@ -592,7 +589,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/other/md%E7%9A%84%E4%BD%BF%E7%94%A8/">http://example.com/2020/11/22/other/md%E7%9A%84%E4%BD%BF%E7%94%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +627,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/%E6%9D%82%E9%A1%B9/">
+                                    <span class="chip bg-color">杂项</span>
                                 </a>
                             
                         </div>
@@ -805,13 +802,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/other/npm%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="npm学习总结">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">npm学习总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -826,11 +823,7 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
-                                </a>
+                            <i class="fas fa-user fa-fw"></i>
                             
                             
                         </span>
@@ -839,8 +832,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/%E6%9D%82%E9%A1%B9/">
+                        <span class="chip bg-color">杂项</span>
                     </a>
                     
                 </div>
@@ -854,13 +847,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/other/linux%E6%8C%87%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="linux命令">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">linux命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -875,11 +868,7 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
-                                </a>
+                            <i class="fas fa-user fa-fw"></i>
                             
                             
                         </span>
@@ -888,8 +877,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>

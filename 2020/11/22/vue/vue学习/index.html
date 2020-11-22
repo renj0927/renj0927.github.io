@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="vue, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>vue | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">vue</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
+                            <a href="/public/categories/VUE/" class="post-category">
+                                VUE
                             </a>
                         
                     </div>
@@ -473,100 +473,146 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
-</li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
-</li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
-</li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
-</li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
-</li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
-</li>
-</ul>
+                <h4 id="vue学习"><a href="#vue学习" class="headerlink" title="vue学习:"></a>vue学习:</h4><h5 id="基本知识："><a href="#基本知识：" class="headerlink" title="基本知识："></a>基本知识：</h5><p>​        -<code>\&#123;&#123;\&#125;&#125;</code>—文本或数据显示的地方，里面只运行js代码，纯js代码也可以运行。</p>
+<pre><code>     -标签有的指令： </code></pre>
+<p>​                 -v-html—可以显示数据中带有标签的，标签内的部分部分。标签内按照样式显示。</p>
+<p>​                 -v-text—把标签也输出，也没有相应的标签效果。</p>
+<p>​        -v-show=”定义的值“ 值是布尔值 控制一个值的隐藏或显示  。相当于是将相应的display：none。如果需要频繁的切换，使用v-show</p>
+<p>​        - v-if=”定义的值“ 值时boolean 节点的动态创建和删除。相当于是dom中的appendChild（） removeChild（）如果运行时条件很少变换，则使用v-if</p>
+<p>​                -动态切换class的方式，三目写法，对象写法，数组写法（可以任意的切换）    </p>
+<p>​                -v-bind=‘值’ 动态切换class （isActive？‘red’：‘yellow’）buttom中写@click=‘handleClick（）’ 然后在methods中写入click的方法。 <strong>bind和click要结合使用</strong></p>
+<pre><code>      -列表渲染：v-for 循环渲染数据。有index，key值
+
+            -key:必要值。跟踪每个节点的身份，重用和重新排序现有的元素。key=&quot;data.id&quot; //理想的key值，每一项都有id</code></pre>
+<p>​                -v-for，在数组中结合computed/methods计算来控制数组数据的变换。</p>
+<p>​        -传值：使用prop将数据传输到组件中。（尝试自己写组件TODOlist）</p>
+<p>​        数组更新检测：</p>
+<p>​            1：使用一下方法操作数组，可以检测变动。</p>
+<p>​                push，pop，shift，unshift，splice，sort，reverse</p>
+<p>​            2：新数组替换老数组。</p>
+<p>​                filter，concat，slice，map</p>
+<p>​    -在组件中：data必须是一个函数，template优先级比较高，数据驱动视图</p>
+<p>​    事件处理：</p>
+<p>​        1：@click=”事件“（函数写不写括号，主要是要看需不需要传输数据。）在methods中写响应事件所对应的方法（函数），然后当监听到事件发生改变时就可以运行了。</p>
+<p>​        2：click会产生冒泡现象，所以原生使用stoPropogation来阻止。vue中有.stop的事件修饰符，用来阻止冒泡。.prevent阻止事件跳转。.self事件只有自己才可以触发。.once只能执行一次的事件修饰符。   </p>
+<p>​        3：按键修饰符： @keyup.enter (后者是我们想要设置的特殊键值)</p>
+<p>​        4：在内联语句处理器中访问原始的dom节点，可以用特殊变量$event传入方法内。</p>
+<p>​        5：事件修饰符：事件+.事件修饰符 能更好的处理事件的细节。.stop-阻阻止事件冒泡.prevent-拦截默认事件.capture-事件变为捕获.self-只在自己范围内触发.once-只触发一次.passive-不拦截默认事件。（要注意修饰符的顺序）</p>
+<p>​        6：按键修饰符：.enter.tab.delete.esc.space.up.down.left.right(就是添加一些特殊的键值)</p>
+<p>​        7:系统修饰符：.ctrl.alt.shift.meta-对应着mac上的cmd键。.exact–可以和前面的串联，表示只有某个特殊按键的时候才会触发。</p>
+<p>​        8：鼠标修饰符：.left.right.middle</p>
+<p>​    双向绑定：v-model，通常和表单一起使用。</p>
+<p>​        -vue中的v-model和v-bind：</p>
+<p>​            -v-model是双向绑定,即表单可以拿到vue中的数据,表单中的数据也可以传到vue中。</p>
+<p>​            -v-bind:value 只能是表单拿到vue的数据,vue无法拿到表单的数据。</p>
+<p>​        -修饰符：.lazy–可以控制v-model绑定的数据在change事件之后同步.number–可以直接将输入的值转换成数值类型(通用).trim–可以自动过滤收尾的空白字符。</p>
+<p>​    -动态组件：v-bind:is=“属性”(这个属性包括：已注册组件的名字/一个组件的选项对象)</p>
+<h5 id="组件注册："><a href="#组件注册：" class="headerlink" title="组件注册："></a>组件注册：</h5><p>-组件名：推荐使用糖葫芦写法，驼峰也是可以的。</p>
+<p>-全局注册：Vue.cmponent()注册的组件可以使用在new Vue()创建出来的根实例中。 </p>
+<p>-局部注册：var 组件1={}来定义组件，然后在new Vue实例中可以通过components:{‘组件名’：组件1}来定义。*局部注册的组件在其子组件中不可用。想要使用的话，只能在模块系统中局部注册-&gt;import 组件 from ‘vue文件中’ export default{ components:{ 组件1，组件2 } }</p>
+<p>​    -？？？在想要只使用基础组件中的一部分时，可以使用require.context只全局注册这些非常通用的基础组件。可以在应用的入口文件（src/main.js）中全局导入基础组件。</p>
+<h5 id="prop："><a href="#prop：" class="headerlink" title="prop："></a>prop：</h5><p>-命名：使用驼峰写法</p>
+<p>-类型：props:[‘字符串1’，‘字符串2’…] 但最好是是能够以对象的形式列出prop(值：类型)</p>
+<p>-传值：任何一个类型的值都可以传递给一个prop，</p>
+<p>-单向数据流：父级prop的更新会向下流到子组件中，</p>
+<p>-使用：在父组件中通过v-bind定义一个值。在子组件的vue实例中定义该属性，并把值设为目标属性的数字即可。这样子组件就能接受到父组件中的属性值向下流下来的数据。</p>
+<p>-验证：为了验证prop中属性传来的值的类型是否正确。验证失败时会产生一个控制台的警告。</p>
+<p>-非prop的attribute？？</p>
+<h5 id="emit："><a href="#emit：" class="headerlink" title="$emit："></a>$emit：</h5><p>-事件名：推荐是用糖葫芦写法。</p>
+<p>-作用：子组件使用它来触发父组件的自定义事件。$emit(event,arg)</p>
+<p>-使用：父组件 v-bind=“属性” 子组件 prop来接受父组件传来的数据。子组件监听了一个事件来来触发父组件中的事件。(子组件的事件触发，来接连触发父组件的事件。)</p>
+<h5 id="："><a href="#：" class="headerlink" title="："></a><slot>：</h5><p>-就是给组件中挖了一个坑，只要在组件的模板中写入了<slot></slot>,那么组件在渲染的时候，写插槽的地方将会被替换为html中组件内写的内容。如果没有，那么中间的内容都会被抛弃。(就像是一个立体的空心积木)</p>
+<p>-是子组件中提供给父组件使用的一个占位符，父组件可以向里面填充任何的内容。</p>
+<p>-具名插槽：有名字的插槽，因为一个子组件中可以加入很多个插槽，为了能区分它们，就有了它。子-<slot name='header'> 父-<template v-slot:header> 使用v-slot来连接子中插槽。</p>
+<p>-默认插槽：没有命名的就是默认插槽，但是前提是子中有<slot> 父中有传值</p>
+<p>-作用域插槽：带参数的插槽，子组件提供给父组件一个仅用于插槽中的参数，父组件就可以通过不同的方式展示和填充内容。？？</p>
+<p>-过滤器：为页面数据添油加醋的功能。</p>
+<p>​    -局部：1：在vue实例中，添加一个filters:{ 方法，用来修改或筛选后端传过来的数据  }来声明过滤器2：使用<code>&#123;&#123; 数据\|过滤器的名字&#125;&#125;  过滤</code>器就是一个函数。</p>
+<p>​    -全局：vue.filter(‘过滤器名字’，函数逻辑)</p>
+<p>-watch：监听的是单个属性，基本类型普通监听，复杂类型 deep监听。监听操作的是数据，而计算操作的是函数。</p>
+<p>-methods:直接修改的数据属性</p>
+<h5 id="渲染函数："><a href="#渲染函数：" class="headerlink" title="渲染函数："></a>渲染函数：</h5><h5 id="单文件组件："><a href="#单文件组件：" class="headerlink" title="单文件组件："></a>单文件组件：</h5><p>-SPA：单页Web应用。特点：在前后端分离的基础上加了一层前端路由</p>
+<p>-扩展名：.vue。</p>
+<p>-其中，css可以使用预处理器来构建。</p>
+<p>前面学到的是vue2，好上手，但是实际应用中要用vue全家桶(vue全家桶：vue-cli，vue-router，vue-resource，vuex) vue-cli:脚手架，相当于是启动了一个请求服务器，把环境搭建好了，只要开发就行。</p>
+<p>脚手架的使用：</p>
+<p>​    1：先安装一个全局webpack。npm install webpack -g。再安装一个全局的vue-cli。 npm install -g vue-cli.</p>
+<p>​    2:cd 进一个要放项目的文件夹 直接创建一个.vue文件。vue create + 项目名。(vue 3.X以上使用，2.x就用npm install webpack + 项目名)</p>
+<p>​    3：安装相应的依赖。npm install</p>
+<p>​    4:起项目。npm run start （也可以显式的指定入口文件。不太会）</p>
+<p>vue引入公共样式的三种方式：</p>
+<p>​    1：入口main.js中引入。  import  from  </p>
+<p>​    2：在index.html中引入。</p>
+<p>​    3：直接在app.vue中引用，但在index.html的head上空出一个<style></p>
+<p>vue组件父子传值的4种方法:props，ref,emit,模板传递通信slot</p>
+<p>​    -props：</p>
+<p>​        静态传值就是直接通过props来传递。</p>
+<p>​        动态传值是通过v-bind来绑定一个要传递值的key，然后后面跟要传递的内容，不过这个内容是可以改变的</p>
+<p>​    -slot：父组件在使用子组件的同时并向其中传值。</p>
+<p>·vue里的ref（$ref）:</p>
+<p>​    1、ref 加在普通的元素上，用this.ref.name 获取到的是dom元素</p>
+<p>　　 2、ref 加在子组件上，用this.ref.name 获取到的是组件实例，可以使用组件的所有方法。</p>
+<p>　  3、如何利用 v-for 和 ref 获取一组数组或者dom 节点</p>
+<p>·prop 着重于数据的传递，它并不能调用子组件里的属性和方法。像创建文章组件时，自定义标题和内容这样的使用场景，最适合使用prop。</p>
+<p>·$ref 着重于索引，主要用来调用子组件里的属性和方法，其实并不擅长数据传递。而且ref用在dom元素的时候，能使到选择器的作用，这个功能比作为索引更常有用到。</p>
+<p>ref  $refs:</p>
+<p>​    ·ref指定了某个dom节点。（相当于是一个字符串型的索引值）</p>
+<p>​    ·refs是所有ref的集合。</p>
+<p>​    ·ref和v-for一起使用时，获取的引用会是一个数组，</p>
+<p>–html中 ref=”profile”</p>
+<p>–组件中  child = perent.$refs.profile(child是perent中所有dom节点的集合，标识就是profile)</p>
+<p>表单验证：validate()</p>
+<p>​    p=this.$refs.form.validate()  submit过来的从上面传来的表单值，是否有效，p.then.</p>
+<h5 id="vue-router："><a href="#vue-router：" class="headerlink" title="vue-router："></a>vue-router：</h5><p>-<strong>核心：</strong>改变url，但是页面不进行整体的刷新。结合vue.js来创建单页应用。   可以通过组合组件来组成应用程序，当把路由加入后，只需要将组件映射到路由，然后告诉路由在哪里渲染。</p>
+<p>-<strong>路由规则：</strong>hash和history</p>
+<p>​    -hash：#=锚点，本质是改变window.location的href属性。可以直接赋值location.hash改变href，但页面不刷新。</p>
+<p>​    -history：可以改变url而不刷新页面。(比较新，IE9之前不能使用，所以hash更加通用一些)</p>
+<p>​        -history.pushState()：类似栈，有进有出</p>
+<p>​        -history.replaceState()：替换url，没有退回(常用的)</p>
+<p>​        -history.back()</p>
+<p>​        -history.forward()</p>
+<p>​        -history.go(num)</p>
+<p>-<strong>路由分类：</strong></p>
+<p>​    -动态路由：path:’/user/:id’ .以冒号开头，只要前缀相同就都能映射到相同的路由上去。</p>
+<p>​    -嵌套路由：有同一个父路由的路由。在普通路由配置的时候加入一个children：[{其他路由}]</p>
+<p>​    -命名路由：给路由加一个name，在使用<code>router-link :to=&quot;&#123; name：‘xx’，params：&#123;xx&#125;&#125;&quot; name</code>是前半段，params是后半段。跳转的路径是/xx/xx.</p>
+<p>-<strong>路由视图：</strong><router-view></router-view> –必须有，相当于是在页面中给路由站了一个位置。</p>
+<p>-props：在路由中加入props参数，可以将组件和路由解耦，这样使的组件更易重用和测试。<strong>设置：</strong>props：true 。这样就会将route.params设置为组件属性（???）—传参这里有很大的问题。</p>
+<p>-<strong>步骤：</strong></p>
+<p>1：定义路由或者从别处引入，<script src="./vue-router.js"></script>。</p>
+<p>2:准备路由所需要的组件。(能够跳转的块)。</p>
+<p>3：创建路由对象，在对象中配置路由规则 var routes=new VueRouter({ path:’/foo’,component:Foo })。（这两值必备，name可有可无）</p>
+<p>4：在vue中注入路由。vue实例中，加入一个router。</p>
+<p>5：通过<router-view></router-view>挖坑，路径匹配到的组件都会渲染到这来。</p>
+<p>6：路由通过<router-link to="相应路由的path">跳转，这个被渲染后会变成a标签，值的前面会变成一个#，从而变成锚点。(链接的一种，就是在<a name="xxx" href="#hello">这就是在特定的xxx的地方设置了一个锚点。)</p>
+<p>-<strong>实际操作：</strong></p>
+<p>​    1：在组件目录下写spa，然后在router目录下使用import引入之前写的spa(使用相对路径(相对路径：./文件名表示在当前目录下。))</p>
+<p>​    2：在router目录中的index.js，的下面写入相应的路由，按照给定的模板写。引入时要注意new router的地址。import .. from ‘new router的地方’(给的模板中设置的name是用在嵌套路由上的。)</p>
+<p>​    3：在main.js中import相应的router</p>
+<p>​    4：在app.vue中加入<router-link>来定义页面中点击触发部分(定义当点击后去到的地方)<router-view>来在页面中显示。</p>
+<p>​    5：重定向-就是在路由中一定要加一个路由，指向有的页面（用户输入了不存在的路由，跳转到有用的页面去）两种写法：1：path:’<em>‘,redirect:’/组件’ 2：path:’\</em>‘,redirect:{name:’组件’}。</p>
+<p>-<strong>路由守卫：</strong> 就是在路由的基础上添加了钩子函数    </p>
+<p>​    -全局前置守卫：router.beforeEach((to,from,next)=&gt;{})  to=即将进入的目标路由对象-到哪去。from=当前要离开的路由-从哪来。next=function，一定要调用这里的方法，来resolve这个钩子。next函数中的参数，会影响执行效果。【无参-&gt;进行下一个钩子，如果全都执行完了，那么导航的状态就是confirmed。false-&gt;中断当前的导航。在正在改变url的过程中，那么url地址会重置到from路由对应的地址。’/‘-&gt;跳转到不同的地址。中断正在跳转的地址，然后去一个新的地址。(可以传递任意函数？？？)。error-&gt;导航过程会被终止，并且错误会传去router.onError()注册过的回调中去。】</p>
+<p>​    -全局解析守卫：router.beforeResolve()=和上面类似。区别：在导航被确认之前，同时在all component内守卫，和异步路由组件被解析之后，解析守卫被调用。</p>
+<p>​    -全局后置钩子：router.afterEach((to,from)=&gt;{})。没有next，不会改变导航本身。</p>
+<p>-<strong>导航解析流程：</strong> (导航：路由正在跳转的过程)</p>
+<p>触发导航 -&gt; 在失活的组件里调用 <code>beforeRouteLeave</code> 守卫。(失活的组件就是要被离开的组件)-&gt;调用全局的 <code>beforeEach</code> 守卫。(在导航前)-&gt;在重用的组件里调用 <code>beforeRouteUpdate</code>(路由改变，组件被复用时调用)-&gt;在路由配置里调用 <code>beforeEnter</code>-&gt;解析异步路由组件-&gt;在被激活的组件里调用 <code>beforeRouteEnter</code>-&gt;调用全局的 <code>beforeResolve</code>-&gt;导航被确认-&gt;调用全局的 <code>afterEach</code> 钩子-&gt;触发 DOM 更新-&gt;调用 <code>beforeRouteEnter</code> 守卫中传给 <code>next</code> 的回调函数，创建好的组件实例会作为回调函数的参数传入</p>
+<p>-元信息：</p>
+<p>-<strong>过渡动效：</strong> 加入一个<transition></transition> 来实现切换路由时中间的过渡动画。</p>
+<p>-<strong>数据获取：</strong> 两种，导航完成<strong>前</strong>-在路由进入的守卫中获取数据，获取数据之后再进行导航/<strong>后</strong>-先导航，结束后在组件的生命周期钩子中获取数据。</p>
+<p>-<strong>滚动行为：</strong> 控制页面来回回滚后，前的滚动条进度保持的位置。<strong>使用：</strong> 给router实例中，加入一个scrollBehavior(to, from, savePosition)方法。</p>
+<h5 id="路由参数："><a href="#路由参数：" class="headerlink" title="路由参数："></a>路由参数：</h5><p>-router传递参数：使用上面的那个router-link</p>
+<p>-接受参数：</p>
+<p>​    -组件接收：在html中获取路由参数, 通过$route.params.参数名</p>
+<p><code>var productType = Vue.component(&#39;productType&#39;,&#123;</code><br>    <code>//在html中获取路由参数, 通过$route.params.参数名</code><br>    <code>template:&#39;&lt;div&gt;这里显示商品编号&#123;&#123;$route.params.id&#125;&#125;&lt;/div&gt;&#39;,</code><br><code>&#125;)</code></p>
+<p>​    -js接收：在js中获取路由参数, 通过this.$route.params.参数名</p>
+<p><code>var productType = Vue.component(&#39;productType&#39;,&#123;</code><br>    <code>//在html中获取路由参数, 通过$route.params.参数名</code><br>    <code>template:&#39;&lt;div&gt;这里显示商品编号&#123;&#123;$route.params.id&#125;&#125;&lt;/div&gt;&#39;,</code><br>    <code>//模板编译完成之后调用</code><br>    <code>mounted() &#123;</code><br>        <code>//在js中获取路由参数, 通过this.$route.params.参数名</code><br>        <code>console.log(this.$route.params.id)</code><br>    <code>&#125;,</code><br><code>&#125;)</code></p>
+<p>-this.$route.query和this.$route.params的区别：</p>
+<p>​    传参数时，query:{path: item.id} url中会带有参数 params:{name: item.id} url中没有参数显示</p>
+<p>-响应路由的参数变化：<br>Q:1：v-model绑定，循环渲染的时候value怎么设置。</p>
+<p>2：ref，prop的具体区别，实际使用的时候呢</p>
+<p>3:fx-cascader中的数据怎么传</p>
+<p>4:为什么有时候按钮不触发事件</p>
 
             </div>
             <hr/>
@@ -592,7 +638,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/vue/vue%E5%AD%A6%E4%B9%A0/">http://example.com/2020/11/22/vue/vue%E5%AD%A6%E4%B9%A0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +676,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -805,13 +851,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/vue/keep-alive/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="保存当前页面状态的方法">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">保存当前页面状态的方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -828,8 +874,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/VUE/" class="post-category">
+                                    VUE
                                 </a>
                             
                             
@@ -839,8 +885,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
@@ -854,13 +900,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/js/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="JS常用方法">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">JS常用方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -877,8 +923,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/JS/" class="post-category">
+                                    JS
                                 </a>
                             
                             
@@ -888,8 +934,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>

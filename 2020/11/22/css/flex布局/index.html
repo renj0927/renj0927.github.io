@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="flex布局, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>flex布局 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">flex布局</h1>
                 </div>
             </div>
         </div>
@@ -473,97 +473,60 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
+                <h3 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h3><hr>
+<p>一：是什么</p>
+<ul>
+<li>是“flexible box”的缩写。是指弹性盒子。所有容器都可以设置。<ul>
+<li>父容器设置flex后，子容器的float，clear，vertical-align都会失效。</li>
 </ul>
 </li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
+<li>设置display：flex的叫做flex容器。容器中的叫做flex项目。对于项目，有两个方向，水平的主轴，垂直的交叉轴。</li>
+</ul>
+<p>二：容器的属性</p>
+<ul>
+<li>flex-direction    <ul>
+<li>控制项目在主轴的排列方向。</li>
+<li>row(横向) | row-reverse | column（纵向） | column-reverse</li>
 </ul>
 </li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
+<li>flex-wrep<ul>
+<li>控制如果项目多了需不需要换行</li>
+<li>nowrap(不换行) | wrep(换行) | wrep-reverse(反向换行)</li>
 </ul>
 </li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
+<li>flex-flow<ul>
+<li>上俩个属性的集合写法。 flex-direction  || flex-wrep</li>
 </ul>
 </li>
+<li>justify-content<ul>
+<li>定义主轴上的排列方式</li>
+<li>flex-start | flex-end | center | space-between | space-aroud.(between和aroud都是展开排列，不同的是，between顶头拉伸的，aroud是从中间均匀拉伸。)</li>
 </ul>
 </li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
+<li>align-items<ul>
+<li>定义纵轴上的排列方式</li>
+<li>flex-start | flex-end | center | strech | baseline</li>
 </ul>
 </li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
+<li>align-content<ul>
+<li>定义多根轴上的定义方式。 </li>
 </ul>
 </li>
 </ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
+<p>三：项目的属性</p>
+<ul>
+<li>order<ul>
+<li>定义项目的排列顺序，数值越小越靠前。</li>
 </ul>
 </li>
+<li>flex<ul>
+<li>是 flex-grow(放大比例) | flex-shrink(缩小比例) | flex-basis的集合写法。他们的默认值分别是 0 1 auto。他们均匀分配空间。</li>
+<li>Q:flex:1代表着什么。    a: flex:1 == flex:1 1 auto</li>
 </ul>
 </li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
-</li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
-</li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
-</li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
+<li>align-self<ul>
+<li>允许单个项目有与其他项目不同的对齐方式。会覆盖alige-items。</li>
+<li>auto | flex-start | flex-end | center | baseline | stretch;</li>
 </ul>
 </li>
 </ul>
@@ -592,7 +555,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/css/flex%E5%B8%83%E5%B1%80/">http://example.com/2020/11/22/css/flex%E5%B8%83%E5%B1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -805,13 +768,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/js/%E6%95%B0%E6%8D%AE%E7%9A%84%E8%AF%B7%E6%B1%82/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="数据的请求">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">数据的请求</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -828,8 +791,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/JS/" class="post-category">
+                                    JS
                                 </a>
                             
                             
@@ -839,8 +802,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>
@@ -854,13 +817,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">浮动与清除浮动</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="JS常用方法, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>JS常用方法 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">JS常用方法</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/JS/">
+                                <span class="chip bg-color">JS</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
+                            <a href="/public/categories/JS/" class="post-category">
+                                JS
                             </a>
                         
                     </div>
@@ -473,100 +473,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
-</li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
-</li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
-</li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
-</li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
-</li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
-</li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
-</li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
-</li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
-</li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
-</li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
-</li>
-</ul>
+                <h2><center>数组</center></h2>
+
+<hr>
+<h4>数组迭代：</h4>
+
+<p>​- every(过滤器函数):迭代数组中的每一个函数，直到出现false。<br>​- some:同every相反，直到返回true。<br>​- forEach():和使用for相同。<br>​- map():创建了新数组，每一个都迭代<br>​- filter():创建新数组，只存放返回值是true的那个。</p>
+<p>-数组缩小：</p>
+<p>​    -reduce(function(preV,curV,idx,arr)):内部函数会返回一个叠加到累加器的值。常用于数组所有元素求和。</p>
+<p>​    -reduceRight():从最后一项到第一项</p>
+<p>-数组转换：</p>
+<p>​    -array.toString():</p>
+<p>​    -array.valueOf:将数组作为字符串返回。</p>
+<p>​    -array.join(不同连接符):将数组元素连接成串。</p>
+<p>-数组的栈方法:(用来操作队列尾部)</p>
+<p>​    -array.push():移入队尾</p>
+<p>​    -array.pop():删除队尾</p>
+<p>-数组的队列方法:(用来操作数组的头部，来模拟队列)</p>
+<p>​    -array.push():推入队尾</p>
+<p>​    -array.shift():将数组第一个值移除。</p>
+<p>​    -array.unshift():将数组第一个值加入。可以用来模拟反向队列。</p>
+<p>-数组重排序方法：</p>
+<p>​    -array.reverse():只能翻转</p>
+<p>​    -array.sort(比较函数):通常结合比较函数一起使用。</p>
+<p>-数组操作方法：</p>
+<p>​    -array.concat(array)–拼接，创建一个新数组</p>
+<p>​    -array.slice(start,end):分割，返回分割后的数组，不会影响原数组。</p>
+<p>​    -array.splice(index,number)/(start,end,添加的元素):可以删除，插入，替换。是功能最强大的数组方法。</p>
+<p>-数组位置方法：</p>
+<p>​    -array.indexOf(index,查找起点):输出与搜索值相同的第一个值的索引。</p>
+<p>​    -array.lastIndexOf(同上)：</p>
+<h5 id="Data类型："><a href="#Data类型：" class="headerlink" title="-Data类型："></a>-Data类型：</h5><p><code>Var now = new Data();</code> 在不传参的情况下，直接获取当前时间（系统还是本地？）</p>
+<p>-Data.parse(data string)：会将字符串转换成日期。但不同浏览器的解析不同。</p>
+<p>-Data.now():返回当前时间的毫秒数。在不支持使用的浏览器中，可以使用+new 把对象转换成字符串。</p>
+<p>-toUTCString():实现特定于实现的格式显示时分秒 ？？？</p>
+<h5 id="RegExp类型："><a href="#RegExp类型：" class="headerlink" title="-RegExp类型："></a>-RegExp类型：</h5><p>-用来支持正则表达式（就是为了查找使用的），<code>var expression = / pattern / flags</code> </p>
+<p>pattern-正则表达式。flags-标识，有g(全局模式，模式被使用于所有字符串),i（不区分大小写）,m（多行模式）</p>
+<p>-实例属性：regexp.global/ignoreCase/multiline-布尔，看是否设置了g，i，m .lastIndex-整数，开始搜索下一个匹配项的字符位置,source-正则的字符串表达式。</p>
+<p>​    </p>
 
             </div>
             <hr/>
@@ -592,7 +536,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/js/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">http://example.com/2020/11/22/js/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +574,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/JS/">
+                                    <span class="chip bg-color">JS</span>
                                 </a>
                             
                         </div>
@@ -805,13 +749,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/vue/vue%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="vue">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">vue</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -828,8 +772,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/VUE/" class="post-category">
+                                    VUE
                                 </a>
                             
                             
@@ -839,8 +783,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
@@ -854,13 +798,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/other/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="git的基础命令">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">git的基础命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -875,11 +819,7 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
-                                </a>
+                            <i class="fas fa-user fa-fw"></i>
                             
                             
                         </span>
@@ -888,8 +828,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>

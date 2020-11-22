@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="垂直居中总结, 啊！快进来学习">
+    <meta name="keywords" content="git的基础命令, 啊！快进来学习">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>垂直居中总结 | 啊！快进来学习</title>
+    <title>git的基础命令 | 啊！快进来学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">垂直居中总结</h1>
+                    <h1 class="description center-align post-title">git的基础命令</h1>
                 </div>
             </div>
         </div>
@@ -432,23 +432,14 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/public/tags/CSS/">
-                                <span class="chip bg-color">CSS</span>
+                            <a href="/public/tags/git/">
+                                <span class="chip bg-color">git</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                CSS学习
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -473,100 +464,126 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="水平、垂直居中总结"><a href="#水平、垂直居中总结" class="headerlink" title="水平、垂直居中总结"></a>水平、垂直居中总结</h3><hr>
-<h4 id="一：行内元素"><a href="#一：行内元素" class="headerlink" title="一：行内元素"></a>一：行内元素</h4><ul>
-<li>水平居中：<ul>
-<li>先设置父容器为块级的。再其中设置text-align：center </li>
-</ul>
+                <p>​  </p>
+<h2>git基础指令</h2>
+
+<hr>
+<ul>
+<li><p>git     查看是否存在及版本</p>
 </li>
-<li>垂直居中：<ul>
-<li> 如果容器有高度。将项目的高度和子高相同就行。line-height:father-height; （让行高===容器高。这样就相当于占满了行高，文字就会居中。）</li>
-<li> 对父容器设置display: table-cell; 和 vertical-align:middle；项目就能垂直居中。</li>
-<li>同上父容器为块级。设置justify-content：center </li>
-</ul>
+<li><p>git init     把目录变成github可以管理的仓库</p>
 </li>
-</ul>
-<h4 id="二：块级元素"><a href="#二：块级元素" class="headerlink" title="二：块级元素"></a>二：块级元素</h4><ul>
-<li>水平居中：<ul>
-<li>子块的宽度决定：<ul>
-<li>定宽：margin:0 auto;</li>
-<li>不定宽：设置父容器为display:inline-block; text-align:center;</li>
-</ul>
+<li><p>git add 文件名     把工作区的文件添加到github仓库的暂存区</p>
 </li>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）left：50%； margin-left:-width/2;</li>
-<li>(不定宽)  left:50%; transform:transitionx:(-50%)</li>
-</ul>
+<li><p>git commit -m “本次提交说明”     把暂存区的文件提交给分支。可add多次再一次commit     一步到位：git commit -am “本次提交说明”</p>
 </li>
-</ul>
+<li><p>git status     查看仓库状态</p>
 </li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置justify-content：center。</li>
-</ul>
+<li><p>git diff 文件名     查看与上次提交的有什么不同 （Mac上一般使用vscode或者 sourceTree来查看版本的不同。）</p>
 </li>
-</ul>
+<li><p>git log     显示从最近到最远的提交历史​</p>
 </li>
-<li>垂直居中：<ul>
-<li>使用定位元素：<ul>
-<li>父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>（定宽）top：50%； margin-top/2;</li>
-<li>(不定宽)  top:50%; transform:transitiony:(-50%)</li>
-</ul>
+<li><p>git log –pretty=oneline     显示从最近到最远的提交日志的版本号</p>
 </li>
-</ul>
+<li><p>git log –graph     看到分支合并图</p>
 </li>
-<li>使用flex布局：<ul>
-<li> 不区分宽度。父容器设置为display：flex；在根据flex布局设置align-items：center。</li>
-</ul>
+<li><p>git reset –hard HEAD^或commit_id     git中用HEAD表示当前版本，HEAD^上一个版本，HEAD^^上上个版本；版本号写前几位就可以</p>
 </li>
-</ul>
+<li><p>git reflog     查看每条历史命令</p>
 </li>
-<li>水平垂直居中：<ul>
-<li>使用定位元素：父容器设为相对定位，position：relative；子容器设为绝对定位，position：absolute。 <ul>
-<li>固定大小：  <ul>
-<li>  top:0;right:0;bottom:0;left:0;margin:auto;</li>
-<li>  top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;</li>
-</ul>
+<li><p>git restore 文件名     丢弃工作区的改动</p>
 </li>
-<li>  不固定大小： top:50%;left:50%;transform:translate(-50%,-50%);</li>
-</ul>
+<li><p>git reset HEAD 文件名     把暂存区的修改撤销掉，重新放回工作区</p>
 </li>
-<li>  使用flex布局：display:flex;justify-content:center;align-items:center;</li>
-</ul>
+<li><p>git remote add origin <a href="mailto:&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#105;&#116;&#x40;&#x67;&#x69;&#116;&#x2e;&#99;&#x6f;&#x6d;</a>: 我的github账户名/远程上要用的空仓库名.git     把本地仓库的内容推送到GitHub仓库</p>
 </li>
-</ul>
-<h4 id="三：使用到的属性"><a href="#三：使用到的属性" class="headerlink" title="三：使用到的属性"></a>三：使用到的属性</h4><ul>
-<li>text-align：<ul>
-<li>规定元素中的文本的水平对齐方式</li>
-<li>center | left | right | justify（按照两端对齐） | inherit</li>
-</ul>
+<li><p>git clone <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#x2e;&#x63;&#111;&#x6d;</a>: 我的github账户名/远程上要用的仓库名.git     把远程库克隆到本地库</p>
 </li>
-<li>vertical-align：<ul>
-<li>主要用来设置行内元素的垂直对齐方式。</li>
-<li>baseline (默认) | sub | super | top | text-top  | middle | bottom | text-bottom | length</li>
-</ul>
+<li><p>git remote set-url origin <a href="mailto:&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#46;&#x63;&#111;&#109;">&#x67;&#x69;&#x74;&#64;&#103;&#x69;&#x74;&#46;&#x63;&#111;&#109;</a>: 新地址/仓库.git     更改远程仓库新指向</p>
 </li>
-<li>top,left,bottom,right:<ul>
-<li>一定要有一个容器，在绝对定位中使用 </li>
-<li>设置离他最近的相对定位的容器的距离。</li>
-</ul>
+<li><p> git push     把本地库的内容推送到远程</p>
 </li>
-<li>transform:translate:<ul>
-<li>向不同方向的轴移动。</li>
-</ul>
+<li><p>git push 远程主机名 本地分支名: 远程分支名     把本地分支的内容推送到远程指定分支​</p>
 </li>
-<li>line-height:<ul>
-<li>设置行间距。</li>
-<li>normal（默认）| number </li>
-</ul>
+<li><p>git checkout -b 分支名     创建分支并切换</p>
 </li>
-<li>position:<ul>
-<li>用来对元素进行定位</li>
-<li>static | relative | absolute | fixed | sticky | inherit</li>
-</ul>
+<li><p>git switch -c 分支名     创建分支并切换。相当于git branch 分支名（创建分支） + git checkout 分支名（切换分支）/ git switch 分支名</p>
+</li>
+<li><p>git branch     查看当前分支  -a显示所有分支  -r显示远程分支  -d删除分支  -D 强行删除分支</p>
+</li>
+<li><p>git merge 分支名     合并指定分支（写的分支名）到当前分支</p>
+</li>
+<li><p>git branch -d 分支名     删除制定分支（写的分支名）</p>
+</li>
+<li><p>git fetch 远程主机名      将某个远程主机的更新全部取回本地</p>
+</li>
+<li><p>git fetch 远程主机名 分支名     只想取回特定分支的更新</p>
+</li>
+<li><p>git pull 远程主机名 远程分支名: 本地分支名     将远程主机的某个分支的更新取回，并与本地指定的分支合并（如果远程分支是与当前分支合并，则冒号后面的部分可以省略）</p>
+</li>
+<li><p>git pull相当于  git fetch origin master   //从远程主机的master分支拉取最新内</p>
+</li>
+<li><p>git merge FETCH_HEAD    //将拉取下来的最新内容合并到当前所在的分支中</p>
+</li>
+<li><p>git merge 分支名     合并分支上的内容到本地来</p>
 </li>
 </ul>
+<p>​    注：拉取后也要push，时刻铭记远程-本地-远程的原则</p>
+<h4 id="开发步骤："><a href="#开发步骤：" class="headerlink" title="开发步骤："></a>开发步骤：</h4><p>​    1：克隆代码     git clone <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x2e;&#99;&#111;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#105;&#116;&#x2e;&#99;&#111;&#x6d;</a>: 我的github账户名/远程上要用的仓库名.git</p>
+<p>​    2：查看所有分支     git branch –all </p>
+<p>​    3：创建本地新的dev分支     git branch 分支名   #创建本地分支</p>
+<p>​    4：发布dev分支     git push origin dev:dev  #同步dev分支的代码到远程服务器，这样远程仓库也有一个dev分支了。</p>
+<p>​    5：在dev分支开发代码</p>
+<ul>
+<li><p>git checkout dev  # 切换到dev分支进行开发</p>
+</li>
+<li><p># 开发代码之后，我们有两个选择</p>
+</li>
+<li><p># 第一个：如果功能开发完成了，可以合并主分支</p>
+</li>
+<li><p>git checkout master  # 切换到主分支</p>
+</li>
+<li><p>git merge dev  # 把dev分支的更改和master合并</p>
+</li>
+<li><p>git push  # 提交主分支代码远程</p>
+</li>
+<li><p>git checkout dev  # 切换到dev远程分支</p>
+</li>
+<li><p>git push  # 提交dev分支到远程</p>
+</li>
+<li><p># 第二个：如果功能没有完成，可以直接推送</p>
+</li>
+<li><p>git push  # 提交到dev远程分支</p>
+</li>
+<li><p># 注意：在分支切换之前最好先commit全部的改变，除非你真的知道自己在做什么。</p>
+</li>
+</ul>
+<p>​    6：删除分支</p>
+<ul>
+<li><p>git push origin :dev  # 删除远程dev分支，危险命令哦</p>
+</li>
+<li><p># 下面两条是删除本地分支</p>
+</li>
+<li><p>git checkout master  # 切换到master分支</p>
+</li>
+<li><p>git branch -d dev  # 删除本地dev分支</p>
+</li>
+</ul>
+<h4 id="新建自己的git仓库："><a href="#新建自己的git仓库：" class="headerlink" title="新建自己的git仓库："></a>新建自己的git仓库：</h4><p>  1：mkdir 文件名 –  创建新文件  cd去到当前文件的路径下，使用pwd检查文件路径。</p>
+<p>  2：初始化  当前路径下 git init 把当前目录变成git可以管理的仓库</p>
+<p>  3：添加文件   使用git add + 文件名，将文件添加到仓库。（添加到仓库的暂存区）</p>
+<p>​     提交文件   使用git commit -m +文件提交情况说明，将文件提交到仓库。。可add(将文件添加到暂存区中)多次再一次commit（提交到分支上）     一步到位：git commit -am “本次提交说明”</p>
+<p>  4: 查看修改状况   git status  如果有更改，会显示 modified</p>
+<p>​      不记得修改了哪里，就可以使用source tree来查看对比上次提交修改了哪些地方。 </p>
+<p>  5: 版本检查：source tree中的分支可以直接查看提交的版本。（git log）</p>
+<p>  6: 文件版本退回：git reset –        退回后，新加的版本就没有了，但是可以通过hard找回  git reset –hard HEAD  （指向当前版本）</p>
+<p>​      git中用HEAD表示当前版本，HEAD^上一个版本，HEAD^^上上个版本；版本号写前几位就可以</p>
+<p>  7: 删除文本：git rm + 文件名   恢复是？？？checkout 为什么没有用</p>
+<p>  8: 创建公钥</p>
+<p>  9: 在github上创建一个远程库，然后使用git remote add origin <a href="mailto:&#x67;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a>: 用户名/仓库名.git</p>
+<p>  与远程的仓库链接。      第一次再使用git push -u origin master，把前面推进仓库的文件发送到远程仓库去。</p>
+<p>*master是git为我们自动创建的第一条分支。</p>
+<p>*nvm alias default 8.12.0 //设置默认的node版本（以后都不用改的那种）</p>
 
             </div>
             <hr/>
@@ -592,7 +609,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/">http://example.com/2020/11/22/css/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2020/11/22/other/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/">http://example.com/2020/11/22/other/git%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -630,8 +647,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/public/tags/CSS/">
-                                    <span class="chip bg-color">CSS</span>
+                                <a href="/public/tags/git/">
+                                    <span class="chip bg-color">git</span>
                                 </a>
                             
                         </div>
@@ -805,13 +822,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/22/css/%E6%B5%AE%E5%8A%A8%E4%B8%8E%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8/">
+                <a href="/2020/11/22/js/js%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="浮动与清除浮动">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="JS常用方法">
                         
-                        <span class="card-title">浮动与清除浮动</span>
+                        <span class="card-title">JS常用方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -828,8 +845,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
+                            <a href="/public/categories/JS/" class="post-category">
+                                    JS
                                 </a>
                             
                             
@@ -839,8 +856,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>
@@ -854,13 +871,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/22/css/%E4%B8%89%E6%A0%8F%E5%B8%83%E5%B1%80/">
+                <a href="/2020/11/22/other/npm%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="三栏布局">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="npm学习总结">
                         
-                        <span class="card-title">三栏布局</span>
+                        <span class="card-title">npm学习总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -875,11 +892,7 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/public/categories/CSS%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    CSS学习
-                                </a>
+                            <i class="fas fa-user fa-fw"></i>
                             
                             
                         </span>
@@ -888,8 +901,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/public/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/public/tags/%E6%9D%82%E9%A1%B9/">
+                        <span class="chip bg-color">杂项</span>
                     </a>
                     
                 </div>
