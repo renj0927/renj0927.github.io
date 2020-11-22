@@ -128,6 +128,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/book" class="waves-effect waves-light">
+      
+      <i class="fas fa-book" style="zoom: 0.6;"></i>
+      
+      <span>Book</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -227,6 +238,17 @@
 			    <i class="fa-fw fas fa-address-book"></i>
 			
 			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/book" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-book"></i>
+			
+			Book
 		</a>
           
         </li>
@@ -485,7 +507,7 @@
 <p>2：state（状态）：所有store对象的数据。可以通过store.getState()获取。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const state &#x3D; store.getState();&#x2F;&#x2F;state是在view中的，和view绑定，state相同，view相同。</span><br></pre></td></tr></table></figure>
 
-<p>3：action（变化）：一个对象。action是view发出的通知。表示state要发生变化了。【type是必要的！！！】 <a target="_blank" rel="noopener" href="https://github.com/acdlite/flux-standard-action">可参考规范</a></p>
+<p>3：action（变化）：一个对象。action是view发出的通知。表示state要发生变化了。【type是必要的！！！】 <a href="https://github.com/acdlite/flux-standard-action">可参考规范</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const action &#x3D; &#123;</span><br><span class="line">  type: &#39;ADD_TODO&#39;,&#x2F;&#x2F;action的名称（就是一个变量的大名）</span><br><span class="line">  payload: &#39;Learn Redux&#39;&#x2F;&#x2F;携带的信息，</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>也可定义函数来生成action<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const ADD_TODO &#x3D; &#39;添加 TODO&#39;;</span><br><span class="line"></span><br><span class="line">function addTodo(text) &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    type: ADD_TODO,</span><br><span class="line">    text</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const action &#x3D; addTodo(&#39;Learn Redux&#39;);</span><br></pre></td></tr></table></figure>
@@ -547,7 +569,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2020/11/22/react/Redux/">http://example.com/2020/11/22/react/Redux/</a>
+                    <a href="http://github.com/renj0927/renj0927.github.io/2020/11/22/react/Redux/">http://github.com/renj0927/renj0927.github.io/2020/11/22/react/Redux/</a>
                 </span>
             </div>
             <div class="reprint__notice">
